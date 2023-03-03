@@ -14,17 +14,21 @@
         <div class="quiz-image">
             <img src="" alt="a starship in space">
         </div>
-        <div id="quiz-questions">
-            <h3>Who is Data's favourite fictional character?</h3>
+        <div id="question-area">
+            <h3 id="question"></h3>
         </div>
         <div id="quiz-answers">
-            <input type="radio">
-            <input type="radio">
-            <input type="radio">
-            <input type="radio">
+            <label for="answerA"></label>
+            <input type="radio" name="answer" id="answerA">
+            <label for="answerB"></label>
+            <input type="radio" name="answer" id="answerB">
+            <label for="answerC"></label>
+            <input type="radio" name="answer" id="answerC">
+            <label for="answerD"></label>
+            <input type="radio" name="answer" id="answerD">
         </div>
         <div id="quiz-score">
-            <h3>Your score is x</h3>
+            <h3>Your score is <span id="score"></span></h3>
         </div>
     </div>
 <script src="assets/javascript/script.js"></script>
