@@ -100,8 +100,10 @@ function checkA() {
     if(allQuestions[i].answers[0].includes(true)) {
         alert("You chose the correct answer! Score increased by 1");
         score ++; 
+        nextQuestion();
     }else  {
           alert("Unfortunately you chose the wrong answer!");
+          nextQuestion();
     };
     console.log(score);
     //below score function does not seem to work for some reason 
@@ -115,8 +117,10 @@ function checkB() {
     if(allQuestions[i].answers[1].includes(true)) {
         alert("You chose the correct answer! Score increased by 1");
         score ++; 
+        nextQuestion();
     }else  {
           alert("Unfortunately you chose the wrong answer!");
+          nextQuestion();
     };
     console.log(score);
     //below score function does not seem to work for some reason 
@@ -130,8 +134,28 @@ function checkC() {
     if(allQuestions[i].answers[2].includes(true)) {
         alert("You chose the correct answer! Score increased by 1");
         score ++; 
+        nextQuestion();
     }else  {
              alert("Unfortunately you chose the wrong answer!");
+             nextQuestion();
+    };
+    console.log(score);
+    //below score function does not seem to work for some reason 
+    let quizS = document.getElementById('quiz-score');
+    let quizI = `<h3>Your score is ${score}</h3>`;
+    quizS.innerHTML = quizI;
+    }
+
+
+function checkD() {
+    
+    if(allQuestions[i].answers[2].includes(true)) {
+        alert("You chose the correct answer! Score increased by 1");
+        score ++; 
+        nextQuestion();
+    }else  {
+            alert("Unfortunately you chose the wrong answer!");
+            nextQuestion();
     };
     console.log(score);
     //below score function does not seem to work for some reason 
@@ -144,7 +168,6 @@ function checkC() {
 function nextQuestion() {
     i++;
     let qq = allQuestions[i].question;
-        let aa = allQuestions[i][1,2,3];
         let quizD = document.createElement("h3");
         let quizA = document.getElementById('quiz-area');
         quizD.innerHTML = qq;
@@ -152,20 +175,14 @@ function nextQuestion() {
 
         let answerList = document.createElement("div");
         let answerText = `
-        <label for="answerA">${allQuestions[i].answerX}</label>             
-        <input type="radio" name="answer"  id="answerA>              
-        <label for="correctAnswer">${allQuestions[i].answerCorrect}</label>              
-        <input type="radio" name="answer"  id="correct-answer">              
-        <label for="answerC">${allQuestions[i].answerY}</label>              
-        <input type="radio" name="answer"  id="answerC">             
-        <label for="answerD">${allQuestions[i].answerZ}</label>             
-        <input type="radio" name="answer" id="answerD">
-        <div id="button-area">           
-            <button type="submit" id="submit" onclick="answerCheck();">Submit Answer</button>
-        </div>   
+        <button onclick="checkA();">${allQuestions[i].answers[0][0]}</button>
+        <button onclick="checkB();">${allQuestions[i].answers[1][0]}</button>
+        <button onclick="checkC();">${allQuestions[i].answers[2][0]}</button>
+        <button onclick="checkD();">${allQuestions[i].answers[3][0]}</button>
         `;
         answerList.innerHTML = answerText;
-        quizA.appendChild(answerList); 
+        quizA.appendChild(answerList);
+    
 
 }
 
