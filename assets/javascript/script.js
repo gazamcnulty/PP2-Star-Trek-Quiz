@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
     <h3 id="welcome">Click the button to start the game!</h3>
             <button type="submit" id="start" onclick="startGame();">Start Game</button>
             `;
-
     }
 )
 
@@ -26,35 +25,50 @@ function startGame() {
 
     let quizA = document.getElementById('quiz-area');
 
-    let quizB = `<div id="question-area">
+    let quizB = `
     <h3 id="question">What is the name of Data's cat?</h3>
     </div>         
     <div id="quiz-answers">             
     <label for="answerA">Felix</label>             
-    <input type="radio" name="answer" class="answer" id="answerA">              
+    <input type="radio" name="answer" class="answer" class="wrong-answer">              
     <label for="answerB">Spot</label>              
-    <input type="radio" name="answer" class="answer" id="answerB">              
+    <input type="radio" name="answer" class="answer" id="correct-answer">              
     <label for="answerC">Fluffy</label>              
-    <input type="radio" name="answer" class="answer" id="answerC">             
+    <input type="radio" name="answer" class="answer" class="wrong-answer">             
     <label for="answerD">Lietenant-Commander Whiskers</label>             
-    <input type="radio" name="answer" class="answer" id="answerD">             
-    <button type="submit" id="submit" onclick="answerCheck();">Submit Answer</button>         
+    <input type="radio" name="answer" class="answer" class="wrong-answer">
+    <div id="button-area">           
+    <button type="submit" id="submit" onclick="answerCheck();">Submit Answer</button>
+    </div>         
     </div>         
     <div id="quiz-score">              
-    <h3>Your score is <span id="score"></span></h3>         
-    </div>`;
+    <h3>Your score is <span id="score"></span></h3>  
+    </div>       
+    `;
 
     quizA.innerHTML = quizB;
 
 }
 
 function answerCheck() {
+    if(document.getElementById('correct-answer').checked) {
+        alert("You chose the correct answer! Score increased by 1");
+    }else  {
+          alert("Unfortunately you chose the wrong answer!");
+    }
 
+    let buttonA = document.getElementById('button-area');
+    buttonA.innerHTML = `<button type="submit" id="submit" onclick="checkScore();">Next Question</button>`
 
     }
 
+function checkScore() {
 
-console.log("is this working?");
+}
+
+function nextQuestion() {
+
+}
 
 function increaseScore() {
 
