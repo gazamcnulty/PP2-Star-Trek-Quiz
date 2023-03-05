@@ -1,5 +1,33 @@
 console.log("hello friend");
+
+let question1 = {
+    question: "What is the name of Data's cat?",
+    answerX: 'Fluffy',
+    answerCorrect: 'Spot',
+    answerY: "Lieutenant Commander Whiskers",
+    answerZ: 'William'
+};
+let quizC = question1.question;
+console.log(quizC);
+
+let question2 = {
+    question: "What is Picard's favourite beverage?",
+    answerX: 'Black coffee',
+    answerY: 'Hot chocolate',
+    answerCorrect: 'Earl grey tea',
+    answerZ: 'Espresso'
+};
+
+let question3 = {
+    question: "What is the name of the Klingon sword?",
+    answerCorrect: "Bat'leth",
+    answerX: "Qaplah",
+    answerY: "Lightsabre",
+    answerZ: "Bird of prey"
+}
+
 let score = 0;
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -102,3 +130,6 @@ function increaseScore() {
 function decreaseScore() {
 
 }
+
+
+
