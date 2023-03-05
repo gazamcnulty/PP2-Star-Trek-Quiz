@@ -1,23 +1,28 @@
 console.log("hello friend");
 
 
-/*
+
 document.addEventListener("DOMContentLoaded", function() {
-    let questionVar = "";
-    console.log(questionVar);
-    questionVar = "What is Data's brother's name?";
-    document.getElementById("question").innerHTML = questionVar;
-    console.log(questionVar);
+    let welcomeA = document.getElementById('welcome-area');
+    welcomeA.innerHTML = `
+    <img src="assets/images/enterprise-front.JPG" alt="a starship in space" id="image">
+    <h3 id="welcome">Click the button to start the game!</h3>
+            <button type="submit" id="start" onclick="startGame();">Start Game</button>
+            `;
 
     }
-)*/
+)
 
-document.addEventListener()
 
 function startGame() {
     let y = document.body;
     let welcomeA = document.getElementById('welcome-area');
     welcomeA.remove();
+
+    let imageA = document.getElementById('quiz-image');
+    imageA.innerHTML = `
+        <img src="assets/images/data-spot.JPG" alt="data and his cat" id="image">
+            `;
 
     let quizA = document.getElementById('quiz-area');
 
