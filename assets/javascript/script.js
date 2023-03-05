@@ -86,25 +86,52 @@ function runGame() {
 
         let answerList = document.createElement("div");
         let answerText = `
-        <button onclick="answerCheck();">${allQuestions[i].answers[0][0]}</button>
-        <button onclick="answerCheck();">${allQuestions[i].answers[1][0]}</button>
-        <button onclick="answerCheck();">${allQuestions[i].answers[2][0]}</button>
-        <button onclick="answerCheck();">${allQuestions[i].answers[3][0]}</button>
+        <button onclick="checkA();">${allQuestions[i].answers[0][0]}</button>
+        <button onclick="checkB();">${allQuestions[i].answers[1][0]}</button>
+        <button onclick="checkC();">${allQuestions[i].answers[2][0]}</button>
+        <button onclick="checkD();">${allQuestions[i].answers[3][0]}</button>
         `;
         answerList.innerHTML = answerText;
         quizA.appendChild(answerList);
 }
 
-function answerCheck() {
+function checkA() {
 
-    let buttonA = document.getElementById('button-area');
-    buttonA.innerHTML = `<button type="submit" id="next-question" onclick="nextQuestion();">Next Question</button>`;
-
-    if(document.getElementById('correct-answer').checked) {
+    if(allQuestions[i].answers[0].includes(true)) {
         alert("You chose the correct answer! Score increased by 1");
         score ++; 
     }else  {
           alert("Unfortunately you chose the wrong answer!");
+    };
+    console.log(score);
+    //below score function does not seem to work for some reason 
+    let quizS = document.getElementById('quiz-score');
+    let quizI = `<h3>Your score is ${score}</h3>`;
+    quizS.innerHTML = quizI;
+    }
+
+function checkB() {
+
+    if(allQuestions[i].answers[1].includes(true)) {
+        alert("You chose the correct answer! Score increased by 1");
+        score ++; 
+    }else  {
+          alert("Unfortunately you chose the wrong answer!");
+    };
+    console.log(score);
+    //below score function does not seem to work for some reason 
+    let quizS = document.getElementById('quiz-score');
+    let quizI = `<h3>Your score is ${score}</h3>`;
+    quizS.innerHTML = quizI;
+    }
+
+function checkC() {
+    
+    if(allQuestions[i].answers[2].includes(true)) {
+        alert("You chose the correct answer! Score increased by 1");
+        score ++; 
+    }else  {
+             alert("Unfortunately you chose the wrong answer!");
     };
     console.log(score);
     //below score function does not seem to work for some reason 
