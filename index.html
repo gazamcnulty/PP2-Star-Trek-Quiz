@@ -8,30 +8,35 @@
     <link type="text/css", rel="stylesheet", href="assets/css/style.css">
     <title>Star Trek Quiz</title>
 </head>
+
 <body>
     <h1>STAR TREK QUIZ</h1>
-    <div class="quiz-area">
-        <div class="quiz-image">
-            <img src="" alt="a starship in space">
-        </div>
-        <div id="question-area">
-            <h3 id="question"></h3>
-        </div>
-        <div id="quiz-answers">
-            <label for="answerA"></label>
-            <input type="radio" name="answer" class="answer" id="answerA">
-            <label for="answerB"></label>
-            <input type="radio" name="answer" class="answer" id="answerB">
-            <label for="answerC"></label>
-            <input type="radio" name="answer" class="answer" id="answerC">
-            <label for="answerD"></label>
-            <input type="radio" name="answer" class="answer" id="answerD">
-            <button type="submit" id="submit">button</button>
-        </div>
-        <div id="quiz-score">
-            <h3>Your score is <span id="score"></span></h3>
-        </div>
+    <div id="welcome-area">
+        <h3 id="welcome">Click the button to start the game!</h3>
+        <button type="submit" id="start" onclick="startGame();">Start Game</button>
     </div>
+    <div class="quiz-image">
+        <img src="assets/images/enterprise-front.JPG" alt="a starship in space" id="image">
+    </div>
+        <div id="quiz-area">
+            <!--<div id="question-area">
+                <h3 id="question"></h3>
+            </div>
+            <div id="quiz-answers">
+                <label for="answerA"></label>
+                <input type="radio" name="answer" class="answer" id="answerA">
+                <label for="answerB"></label>
+                <input type="radio" name="answer" class="answer" id="answerB">
+                <label for="answerC"></label>
+                <input type="radio" name="answer" class="answer" id="answerC">
+                <label for="answerD"></label>
+                <input type="radio" name="answer" class="answer" id="answerD">
+                <button type="submit" id="submit">Start Game</button>
+            </div>
+            <div id="quiz-score">
+                <h3>Your score is <span id="score"></span></h3>
+            </div>-->
+        </div>
 <script src="assets/javascript/script.js"></script>
 </body>
 </html>
