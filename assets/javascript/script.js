@@ -1,29 +1,3 @@
-console.log("hello friend");
-
-
-
-let firstQuestion = {
-    question: "What is the name of Data's cat?",
-    answers: [ ['Fluffy'], ['Spot', true], ["Lieutenant Commander Whiskers"], ['William']]
-};
-
-
-let secondQuestion = {
-    question: "What is Picard's favourite beverage?",
-    answers: ['Black coffee', 'Hot chocolate', 'Earl grey tea', 'Espresso']
-};
-
-let thirdQuestion = {
-    question: "What is the name of the Klingon sword?",
-    answers: ["Bat'leth",  "Qaplah", "Lightsabre", "Bird of prey"]
-}
-
-let allQuestions = [firstQuestion, secondQuestion, thirdQuestion];
-
-let score = 0;
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
 
     let welcomeA = document.getElementById('welcome-area');
@@ -36,40 +10,62 @@ document.addEventListener("DOMContentLoaded", function() {
 )
 
 
-/*function startGame() {
-    let y = document.body;
-    
 
-    let imageA = document.getElementById('quiz-image');
-    imageA.innerHTML = `
-        <img src="assets/images/data-spot.JPG" alt="data and his cat" id="image">
-            `;
-
-    let quizA = document.getElementById('quiz-area');
-
-    /*let quizB = `
-    <h3 id="question">What is the name of Data's cat?</h3>      
-    <div id="quiz-answers">             
-        <label for="answerA">Felix</label>             
-        <input type="radio" name="answer" class="answer" class="wrong-answer">              
-        <label for="answerB">Spot</label>              
-        <input type="radio" name="answer" class="answer" id="correct-answer">              
-        <label for="answerC">Fluffy</label>              
-        <input type="radio" name="answer" class="answer" class="wrong-answer">             
-        <label for="answerD">Lietenant-Commander Whiskers</label>             
-        <input type="radio" name="answer" class="answer" class="wrong-answer">
-        <div id="button-area">           
-            <button type="submit" id="submit" onclick="answerCheck();">Submit Answer</button>
-        </div>         
-    </div>         
-    `;
-    quizA.innerHTML = quizB;
-
-    
+let firstQuestion = {
+    question: "What is the name of Data's cat?",
+    answers: [ ['Fluffy'], ['Spot', true], ["Lt Commander Whiskers"], ['William']]
+};
 
 
-}
-*/
+let secondQuestion = {
+    question: "What is Picard's favourite beverage?",
+    answers: [['Black coffee'], ['Hot chocolate'], ['Earl grey tea', true], ['Espresso']]
+};
+
+let thirdQuestion = {
+    question: "What is the name of the Klingon sword?",
+    answers: [["Bat'leth", true],  ["Qaplah"], ["Lightsabre"], ["Bird of prey"]]
+};
+
+let fourthQuestion = {
+    question: "What starship technology is used by Klingons and Romulans, but not by Starfleet?",
+    answers: [ ['Warp drive'], ['Cloaking invisibility', true], ['Quantum missiles'], ['Time travel']]
+};
+
+let fifthQuestion = {
+    question: "What game did the bridge officers of the Enterprise-D play on a regular basis?",
+    answers: [ ['Scrabble'], ['Poker', true], ["Darts"], ['Rugby']]
+};
+
+let sixthQuestion = {
+    question: "Who was the transporter chief, for the first few years of the Enterprise-D's operation?",
+    answers: [ ['Guinan'], ['Jordy Laforge', ], ["Miles O'Brien", true], ['Leonard McCoy']]
+};
+
+let seventhQuestion = {
+    question: "What ship did Picard command, prior to the Enterprise?",
+    answers: [ ['The Excelsior'], ['The Reliant'], ['The Milennium Falcon'], ['The Stargazer', true]]
+};
+
+let eigthQuestion = {
+    question: "What killed all the people on Data's home Omicron Theta?",
+    answers: [ ['Lore'], ['The Crystalline Entity', true], ["Noonian Singh"], ['Khan']]
+};
+
+let ninthQuestion = {
+    question: "When Picard was assimilated by the Borg, he unwittingly led the Borg in battle and wiped out hundred's of starships. Where in space did this battle take place?",
+    answers: [ ['Wolf-359', true], ["Earth's orbit"], ["Talos-4"], ['Vulcan']]
+};
+
+let tenthQuestion = {
+    question: "What was the name of the terrorist group who split off from the Federation, to lead an underground campaign against the Cardassians?",
+    answers: [ ['Starfleet Rebels'], ['The Maquis', true], ["Newfleet"], ['Anti-Card']]
+};
+
+
+let allQuestions = [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eigthQuestion, ninthQuestion, tenthQuestion ];
+
+let score = 0;
 
 let i = 0;
 
@@ -80,11 +76,13 @@ function runGame() {
 
         let qq = allQuestions[i].question;
         let quizD = document.createElement("h3");
+        quizD.setAttribute("id", "quiz-line");
         let quizA = document.getElementById('quiz-area');
         quizD.innerHTML = qq;
         quizA.appendChild(quizD);
 
         let answerList = document.createElement("div");
+        answerList.setAttribute("id", "quiz-list");
         let answerText = `
         <button onclick="checkA();">${allQuestions[i].answers[0][0]}</button>
         <button onclick="checkB();">${allQuestions[i].answers[1][0]}</button>
@@ -168,12 +166,12 @@ function checkD() {
 function nextQuestion() {
     i++;
     let qq = allQuestions[i].question;
-        let quizD = document.createElement("h3");
+        let quizD = document.getElementById('quiz-line');
         let quizA = document.getElementById('quiz-area');
         quizD.innerHTML = qq;
         quizA.appendChild(quizD);
 
-        let answerList = document.createElement("div");
+        let answerList = document.getElementById('quiz-list');
         let answerText = `
         <button onclick="checkA();">${allQuestions[i].answers[0][0]}</button>
         <button onclick="checkB();">${allQuestions[i].answers[1][0]}</button>
