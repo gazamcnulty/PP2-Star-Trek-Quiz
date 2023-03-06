@@ -165,6 +165,12 @@ function checkD() {
 
 function nextQuestion() {
     i++;
+    if (i >= 10 ) {
+        let quizD = document.getElementById('quiz-line');
+        let answerList = document.getElementById('quiz-list');
+        answerList.remove();
+        quizD.innerHTML = "Thanks for playing!"
+    };
     let qq = allQuestions[i].question;
         let quizD = document.getElementById('quiz-line');
         let quizA = document.getElementById('quiz-area');
