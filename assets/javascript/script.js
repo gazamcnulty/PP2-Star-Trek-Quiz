@@ -1,3 +1,4 @@
+//on pageload, below function runs and shows welcome section
 document.addEventListener("DOMContentLoaded", function() {
 
     let welcomeA = document.getElementById('welcome-area');
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 )
 
+/*below are a series of objects for the questions and answers, each assigned to a variable. the object contains keys of questions and answers , the answers key is an array , with each option as an index in the array*/
 
 
 let firstQuestion = {
@@ -62,9 +64,10 @@ let tenthQuestion = {
     answers: [ ['Starfleet Rebels'], ['The Maquis', true], ["Newfleet"], ['Anti-Card']]
 };
 
-
+/*here I have placed the 10 questions variables into an array, so that they can be targetted via array indexing*/
 let allQuestions = [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eigthQuestion, ninthQuestion, tenthQuestion ];
 
+/*same as with the Qs and As, I have assigned images to variables, but I have used template literals for html coding. these variables can be called on by targetting the variable name with .innerHTML when manipulating the DOM*/
 let image1 = `<img src="assets/images/data-spot.JPG" alt="Data with his cat" id="image">`;
 let image2 = `<img src="assets/images/picard-beverage.JPG" alt="Picard with a drink" id="image">`;
 let image3 = `<img src="assets/images/worf-bat'leth.JPG" alt="Worf holding a Klingon sword" id="image">`;
@@ -77,12 +80,27 @@ let image9 = `<img src="assets/images/Locutus.JPG" alt="Picard post-assimilation
 let image10 = `<img src="assets/images/Ro.JPG" alt="Ro Laren holding a phaser" id="image">`;
 let image11 = `<img src="assets/images/thanks.JPG" alt="Picard holding a beer" id="image">`;
 
+/*image variables in an array so they can be targetted*/
 let allImages = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11];
 
+/*'score' and 'i' will be incremented as the game progresses. 'i' is used to target the next question/answer on each round*/
 let score = 0;
 
 let i = 0;
 
+//below function ' runGame()' runs after clicking the start game button
+// targets the welcome area and removes it 
+// targets the quiz-image div and assigns it a variable, then replaces its html with the first image from images array
+// targets the first question from questions array, assigns it to variable
+// creates a h3 element with id of 'quiz-line'
+// targets quiz-area div and assigns it to a variable
+// targets the h3 and makes its innerhtml the first question from questions array
+// targets the quiz-area variable, makes the h3 question a child of quiz-area
+
+//creates a div assigns it to answerList variable, gives it an id of 'quiz-list'
+//creates a variable with inner html with creates 4 answer buttons
+//buttons have onclick to target checkAnswer functions, they target the answer by array indexing
+//puts buttons html into the answerList variable, this is then made a child of the quiz-area div
 function runGame() {
     let welcomeA = document.getElementById('welcome-area');
     welcomeA.remove();
@@ -110,6 +128,12 @@ function runGame() {
         quizA.appendChild(answerList);
 }
 
+//below are 4 functions using if/else statements to check the answer validity, of the respective button clicked
+//the 4 functions are similar, the only difference being which option they check
+//1st function checks if the first index of the answers array in firstQuestion object
+//if that index contains true it confirms it was correct, increments score and runs 'nextQuesiton()' function
+//if was incorrect, it confirms it was incorrect, it does not increment score and runs 'nextQuestion()' function
+
 function checkA() {
 
     if(allQuestions[i].answers[0].includes(true)) {
@@ -121,7 +145,6 @@ function checkA() {
           nextQuestion();
     };
     console.log(score);
-    //below score function does not seem to work for some reason 
     let quizS = document.getElementById('quiz-score');
     let quizI = `<h3>Your score is ${score}</h3>`;
     quizS.innerHTML = quizI;
@@ -138,7 +161,6 @@ function checkB() {
           nextQuestion();
     };
     console.log(score);
-    //below score function does not seem to work for some reason 
     let quizS = document.getElementById('quiz-score');
     let quizI = `<h3>Your score is ${score}</h3>`;
     quizS.innerHTML = quizI;
@@ -155,7 +177,6 @@ function checkC() {
              nextQuestion();
     };
     console.log(score);
-    //below score function does not seem to work for some reason 
     let quizS = document.getElementById('quiz-score');
     let quizI = `<h3>Your score is ${score}</h3>`;
     quizS.innerHTML = quizI;
@@ -173,12 +194,22 @@ function checkD() {
             nextQuestion();
     };
     console.log(score);
-    //below score function does not seem to work for some reason 
     let quizS = document.getElementById('quiz-score');
     let quizI = `<h3>Your score is ${score}</h3>`;
     quizS.innerHTML = quizI;
     }
 
+// below 'nextQuestion()' function increments 'i' variable, changes question image and loops through to the next question
+// first increases i so the targetted questions, answers and images will be the next index in their respective arrays
+// uses the higher i value, to target the next image and make it the innerHTML of quiz-image variable
+// each image is relevant to the question, final image is thank you message
+
+// if/else statement to check if the game has ended (i has reached value of 10)
+// if i >= 10 it targets quiz-line div and replaces innerHTML with thank you message and removes the answer list from view
+// increments score to show final score
+
+//if i is less than 10, it goes to the next question, using similar code as runGame();
+//targets elements, assigns to variables, uses object/array indexing to target the next question and set of answers
 
 function nextQuestion() {
     i++;
@@ -214,13 +245,6 @@ function nextQuestion() {
 
 }
 
-function increaseScore() {
-
-}
-
-function decreaseScore() {
-
-}
 
 
 
