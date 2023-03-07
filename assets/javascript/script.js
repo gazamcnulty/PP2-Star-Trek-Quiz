@@ -65,6 +65,20 @@ let tenthQuestion = {
 
 let allQuestions = [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eigthQuestion, ninthQuestion, tenthQuestion ];
 
+let image1 = `<img src="assets/images/data-spot.JPG" alt="Data with his cat" id="image">`;
+let image2 = `<img src="assets/images/picard-beverage.JPG" alt="Picard with a drink" id="image">`;
+let image3 = `<img src="assets/images/worf-bat'leth.JPG" alt="Worf holding a Klingon sword" id="image">`;
+let image4 = `<img src="assets/images/ships.JPG" alt="Romulan and Klingon ships" id="image">`;
+let image5 = `<img src="assets/images/game.JPG" alt="Data playing a game" id="image">`;
+let image6 = `<img src="assets/images/transporter.JPG" alt="A person who has beamed in on a transporter" id="image">`;
+let image7 = `<img src="assets/images/stargazer.JPG" alt="An old starship" id="image">`;
+let image8 = `<img src="assets/images/omicron-theta.JPG" alt="Data's home planet" id="image">`;
+let image9 = `<img src="assets/images/Locutus.JPG" alt="Picard post-assimilation" id="image">`;
+let image10 = `<img src="assets/images/Ro.JPG" alt="Ro Laren holding a phaser" id="image">`;
+let image11 = `<img src="assets/images/thanks.JPG" alt="Picard holding a beer" id="image">`;
+
+let allImages = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11];
+
 let score = 0;
 
 let i = 0;
@@ -72,6 +86,9 @@ let i = 0;
 function runGame() {
     let welcomeA = document.getElementById('welcome-area');
     welcomeA.remove();
+
+    let quizI = document.getElementById('quiz-image');
+    quizI.innerHTML = `${allImages[i]}`;
 
 
         let qq = allQuestions[i].question;
@@ -165,6 +182,10 @@ function checkD() {
 
 function nextQuestion() {
     i++;
+
+    let quizI = document.getElementById('quiz-image');
+    quizI.innerHTML = `${allImages[i]}`;
+
     if (i >= 10 ) {
         let quizD = document.getElementById('quiz-line');
         let answerList = document.getElementById('quiz-list');
