@@ -257,6 +257,10 @@ function finalScore() {
         quizS.innerHTML = quizI;
 }
 
+let finalImages = [
+    ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``
+]
+
 let suggestedRank = [
     `<p>Your score was 0 out of 10, yet you still seek a place in Starfleet? You posess unflinching determination, even in the face of inevitable failure. Akin to someone tending a garden, knowing full well the plants will eventually wither. Your would make a fine gardener, like Boothby, beloved groundskeeper of Starfleet academy.</p>` , 
     `<p>Your score was 1 out of 10, you have made the first step towards a career in Starfleet. Everyone can make a difference, regardless of career aptitude. While Starfleet academy might be outside your scope, you could always enlist directly in Starfleet. Without pursuing the high end career like others in the academy, this gets you right in the action. You could rise to the rank of petty officer, start your journey for a more grounded career path.</p>` , 
@@ -272,14 +276,19 @@ let suggestedRank = [
 ]
 
 function starfleetRank () {
+    let quizS = document.getElementById('quiz-score');
+    quizS.remove();
     let quizD = document.getElementById('quiz-line');
         let answerList = document.getElementById('quiz-list');
         /*answerList.remove();*/
-        quizD.innerHTML = `${suggestedRank[score]}`;
+        quizD.innerHTML = `${suggestedRank[score]}
+        <button type="submit" id="apply" onclick="application();">click here to apply to Starfleet</button>`;
         /*let quizS = document.getElementById('quiz-score');
         let quizI = `${suggestedRank[score]}`;
         quizS.innerHTML = quizI;*/
 };
 
 
+function application() {
 
+};
