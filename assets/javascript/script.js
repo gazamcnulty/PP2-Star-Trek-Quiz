@@ -164,7 +164,7 @@ function checkC() {
 
 function checkD() {
     
-    if(allQuestions[i].answers[2].includes(true)) {
+    if(allQuestions[i].answers[3].includes(true)) {
         alert("You chose the correct answer! Score increased by 1");
         score ++; 
         nextQuestion();
@@ -191,6 +191,9 @@ function nextQuestion() {
         let answerList = document.getElementById('quiz-list');
         answerList.remove();
         quizD.innerHTML = "Thanks for playing!"
+        let quizS = document.getElementById('quiz-score');
+        let quizI = `<h3>Your score is ${score}</h3>`;
+        quizS.innerHTML = quizI;
     };
     let qq = allQuestions[i].question;
         let quizD = document.getElementById('quiz-line');
