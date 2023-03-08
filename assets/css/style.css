@@ -6,7 +6,7 @@ body {
 }
 
 #base {
-    background-color: rgb(183, 179, 174);
+    background-color: rgb(233, 227, 219);
     height: 500px;
     width:750px;
     margin: 0 auto;
@@ -35,14 +35,27 @@ h1 {
 
 }
 */
+
+h1 {
+    color: rgba(0,0,255,1);
+    text-shadow: 1px 1px 1px black;
+}
+
+h3 {
+    color: rgba(0,0,255,1);
+    font-weight: bold;
+}
+
 button {
     width: 100px;
     height: 50px;
     vertical-align: middle;
     color: azure;
     background-image: url("../images/space3.jpeg");
+    
 }
 
 img {
     height: 200px;
+    border-radius: 2%;
 }
