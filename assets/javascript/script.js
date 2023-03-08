@@ -258,15 +258,25 @@ function finalScore() {
 }
 
 let finalImages = [
-    ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``
+    `<img src="assets/images/boothby.JPG" alt="a groundskeeper at Starfleet academy" >`,
+    `<img src="assets/images/enlisted.JPG" alt="an enlisted crewman" >`,
+    `<img src="assets/images/cadet.JPG" alt="a cadet at Starfleet academy" >`,
+    `<img src="assets/images/ensign.JPG" alt="Ensign Crusher the Enterprise" >`,
+    `<img src="assets/images/lieutenant.JPG" alt="Worf, a Klingon Lieutenant of the Enterprise" >`,
+    `<img src="assets/images/lieutenant-commander.JPG" alt="Lieutenant-commander Data of the Enterprise" >`,
+    `<img src="assets/images/commander.JPG" alt="Commander Riker of the Enterprise" >`,
+    `<img src="assets/images/captain.JPG" alt="Captain Picard of the Enterprise" >`,
+    `<img src="assets/images/admiral.JPG" alt="an admiral of Starfleet" >`,
+    `<img src="assets/images/president.JPG" alt="the president of the United Federation of Planets">`,
+    `<img src="assets/images/q.JPG" alt="Q , the omnipotent immortal prankster from the Q continuum" >`
 ]
 
 let suggestedRank = [
     `<p>Your score was 0 out of 10, yet you still seek a place in Starfleet? You posess unflinching determination, even in the face of inevitable failure. Akin to someone tending a garden, knowing full well the plants will eventually wither. Your would make a fine gardener, like Boothby, beloved groundskeeper of Starfleet academy.</p>` , 
-    `<p>Your score was 1 out of 10, you have made the first step towards a career in Starfleet. Everyone can make a difference, regardless of career aptitude. While Starfleet academy might be outside your scope, you could always enlist directly in Starfleet. Without pursuing the high end career like others in the academy, this gets you right in the action. You could rise to the rank of petty officer, start your journey for a more grounded career path.</p>` , 
+    `<p>Your score was 1 out of 10, you have made the first step towards serving in Starfleet. Everyone can make a difference, regardless of career aptitude. While Starfleet academy might be outside your scope, you could always enlist directly in Starfleet. Without pursuing the high end career like others in the academy, this gets you right in the action. You could rise to the rank of petty officer, start your journey for a more grounded path to the stars.</p>` , 
     `<p>Your score was 2 out of 10, you are a long way from the captain's chair. But every great journey begins with a small step. If you are determined, then consider joining Starfleet academy. As a Cadet trainee, you will receive a robust education and an opportunity to explore many avenues of starship service, including command, operations and sciences.</p>` ,
     `<p>Your score was 3 out of 10, you're not just the average Pakled. You have the aptitude of Starfleet Academy graduate, with the rank of Ensign. Your service aboard the ship has only just begun, but remember , the trial never ends</p>` , 
-    `<p>Your score was 4 out of 10, you might be the wisest Klingon of the house. You would be well suited to begin training in the officer's program and would be easily considered for the rank of Lieutenant Commander. You've proven you can take command, how far are you willing to go? </p>` ,
+    `<p>Your score was 4 out of 10, you might be the wisest Klingon of the house. You would be well suited to begin training in the officer's program and would be easily considered for the rank of Lieutenant. You've proven you can take command, how far are you willing to go? </p>` ,
     `<p>Your score was 5 out of 10, you are as observant as any Betazoid. With your impressive knowledge of Starfleet activity, you could certainly rise to the rank of Lieutenant Commander. An impressive achievement for anyone, and a stonesthrow from ship XO position of commander. You've got the stuff, but how much stuff is the question</p>` , 
     `<p>Your score was 6 out of 10, you are conniving as any Romulan. You have the drive to suceed and there's no reason you couldn't ascend to the impressive rank of Commander, 1st officer of the ship and XO, ranking just below the Captain.Your path starts here...but lets not pretend you don't covet the captain's chair</p>` ,
     `<p>Your score was 7 out of 10, you are as wise as any Vulcan. You have the charisma, the focus and sheer force of will to ascend to the coveted rank of Captain. You are responsible for the lives of the hundreds of crew serving under you, while also shouldering the responsibility of leading by example while representing Starfleet. You are one in a million</p>` ,
@@ -276,13 +286,15 @@ let suggestedRank = [
 ]
 
 function starfleetRank () {
+    let quizI = document.getElementById('quiz-image');
+    quizI.innerHTML = `${finalImages[score]}`;
     let quizS = document.getElementById('quiz-score');
     quizS.remove();
     let quizD = document.getElementById('quiz-line');
         let answerList = document.getElementById('quiz-list');
         /*answerList.remove();*/
-        quizD.innerHTML = `${suggestedRank[score]}
-        <button type="submit" id="apply" onclick="application();">click here to apply to Starfleet</button>`;
+        quizD.innerHTML = `${suggestedRank[score]}`
+        /*<button type="submit" id="apply" onclick="application();">click here to apply to Starfleet</button>`;
         /*let quizS = document.getElementById('quiz-score');
         let quizI = `${suggestedRank[score]}`;
         quizS.innerHTML = quizI;*/
@@ -290,5 +302,5 @@ function starfleetRank () {
 
 
 function application() {
-
+   
 };
