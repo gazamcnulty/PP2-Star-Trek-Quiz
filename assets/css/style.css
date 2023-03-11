@@ -7,38 +7,23 @@ body {
 
 #base {
     background-color: rgb(233, 227, 219);
-    height: 600px;
-    width:750px;
+    height: 80%;
+    width:80%;
     margin: 0 auto;
     text-align: center;
     border-radius: 5%;
 
 }
 
-/*
-h1 {
-    text-align: center;
-}
-
-#welcome-area {
-    text-align: center;
-}
-
-#quiz-image {
-
-}
-
-#quiz-area {
-
-}
-#quiz-score {
-
-}
-*/
 
 h1 {
     color: rgba(0,0,255,1);
     text-shadow: 1px 1px 1px black;
+}
+
+h2 {
+    color:antiquewhite;
+    text-align: center;
 }
 
 h3 {
@@ -58,4 +43,8 @@ button {
 img {
     height: 200px;
     border-radius: 2%;
+}
+
+fieldset {
+
 }

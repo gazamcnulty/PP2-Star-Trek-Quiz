@@ -309,9 +309,9 @@ function starfleetRank () {
     let quizS = document.getElementById('quiz-score');
     quizS.remove();
     let quizD = document.getElementById('quiz-line');
-        let answerList = document.getElementById('quiz-list');
-        /*answerList.remove();*/
-        quizD.innerHTML = `${suggestedRank[score]}`
+        quizD.innerHTML = `${suggestedRank[score]}`;
+        quizN.innerHTML = `<a href="application.html">Click here to apply</a>`;
+        
         /*<button type="submit" id="apply" onclick="application();">click here to apply to Starfleet</button>`;
         /*let quizS = document.getElementById('quiz-score');
         let quizI = `${suggestedRank[score]}`;
