@@ -130,6 +130,9 @@ function runGame() {
         `;
         answerList.innerHTML = answerText;
         quizA.appendChild(answerList);
+        let reset = document.getElementById('quiz-reset');
+        reset.innerHTML = `<a href="index.html"><button onclick="">Click here to reset the game</button></a>`;
+        
 }
 
 //below are 4 functions using if/else statements to check the answer validity, of the respective button clicked

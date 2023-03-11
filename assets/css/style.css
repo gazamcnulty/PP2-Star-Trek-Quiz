@@ -9,6 +9,7 @@ body {
     background-color: rgb(233, 227, 219);
     height: 80%;
     width:80%;
+    min-height: 700px;
     margin: 0 auto;
     text-align: center;
     border-radius: 5%;
@@ -43,6 +44,12 @@ button {
 img {
     height: 200px;
     border-radius: 2%;
+}
+
+#quiz-reset {
+    position: absolute;
+    top: 650px;
+    left: 718px;
 }
 
 fieldset {
