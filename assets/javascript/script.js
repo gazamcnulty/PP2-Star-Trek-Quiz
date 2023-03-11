@@ -85,6 +85,7 @@ let allImages = [image1, image2, image3, image4, image5, image6, image7, image8,
 
 /*'score' and 'i' will be incremented as the game progresses. 'i' is used to target the next question/answer on each round*/
 let score = 0;
+
 let i = 0;
 
 //below function ' runGame()' runs after clicking the start game button
@@ -136,17 +137,12 @@ function runGame() {
 function checkA() {
 
     if(allQuestions[i].answers[0].includes(true)) {
-        /*alert("You chose the correct answer! Score increased by 1");*/
+        alert("You chose the correct answer! Score increased by 1");
         score ++; 
-        let quizR = document.getElementById('quiz-result');
-        quizR.innerHTML = `<p>That's the right answer, great job!</p><br>
-        <button onclick= "nextQuestion();">Next question</button>`;
-        /*nextQuestion();*/
+        nextQuestion();
     }else  {
-        let quizR = document.getElementById('quiz-result');
-        quizR.innerHTML = `<p>That's not the right answer.</p><br>
-        <button onclick= "nextQuestion();">Next question</button>`;
-        /*nextQuestion();*/
+          alert("Unfortunately you chose the wrong answer!");
+          nextQuestion();
     };
     console.log(score);
     let quizS = document.getElementById('quiz-score');
@@ -157,17 +153,12 @@ function checkA() {
 function checkB() {
 
     if(allQuestions[i].answers[1].includes(true)) {
-        /*alert("You chose the correct answer! Score increased by 1");*/
+        alert("You chose the correct answer! Score increased by 1");
         score ++; 
-        let quizR = document.getElementById('quiz-result');
-        quizR.innerHTML = `<p>That's the right answer, great job!</p><br>
-        <button onclick= "nextQuestion();">Next question</button>`;
-        /*nextQuestion();*/
+        nextQuestion();
     }else  {
-        let quizR = document.getElementById('quiz-result');
-        quizR.innerHTML = `<p>That's not the right answer.</p><br>
-        <button onclick= "nextQuestion();">Next question</button>`;
-        /*nextQuestion();*/
+          alert("Unfortunately you chose the wrong answer!");
+          nextQuestion();
     };
     console.log(score);
     let quizS = document.getElementById('quiz-score');
@@ -179,17 +170,11 @@ function checkC() {
     
     if(allQuestions[i].answers[2].includes(true)) {
         alert("You chose the correct answer! Score increased by 1");
-        
         score ++; 
-        let quizR = document.getElementById('quiz-next');
-        quizR.innerHTML = `<p>That's the right answer, great job!</p><br>
-        <button onclick= "nextQuestion();">Next question</button>`;
-        /*nextQuestion();*/
+        nextQuestion();
     }else  {
-        let quizR = document.getElementById('quiz-result');
-        quizR.innerHTML = `<p>That's not the right answer.</p><br>
-        <button onclick= "nextQuestion();">Next question</button>`;
-        /*nextQuestion();*/
+             alert("Unfortunately you chose the wrong answer!");
+             nextQuestion();
     };
     console.log(score);
     let quizS = document.getElementById('quiz-score');
@@ -201,17 +186,12 @@ function checkC() {
 function checkD() {
     
     if(allQuestions[i].answers[3].includes(true)) {
-        /*alert("You chose the correct answer! Score increased by 1");*/
+        alert("You chose the correct answer! Score increased by 1");
         score ++; 
-        let quizR = document.getElementById('quiz-result');
-        quizR.innerHTML = `<p>That's the right answer, great job!</p><br>
-        <button onclick= "nextQuestion();">Next question</button>`;
-        /*nextQuestion();*/
+        nextQuestion();
     }else  {
-        let quizR = document.getElementById('quiz-result');
-        quizR.innerHTML = `<p>That's not the right answer.</p><br>
-        <button onclick= "nextQuestion();">Next question</button>`;
-        /*nextQuestion();*/
+            alert("Unfortunately you chose the wrong answer!");
+            nextQuestion();
     };
     console.log(score);
     let quizS = document.getElementById('quiz-score');
@@ -233,8 +213,7 @@ function checkD() {
 
 function nextQuestion() {
     i++;
-    let quizR = document.getElementById('quiz-result');
-    quizR.innerHTML = ``;
+
     let quizI = document.getElementById('quiz-image');
     quizI.innerHTML = `${allImages[i]}`;
 
