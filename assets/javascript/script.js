@@ -240,13 +240,7 @@ function nextQuestion() {
 
     if (i >= 10 ) {
         finalScore();
-        /*let quizD = document.getElementById('quiz-line');
-        let answerList = document.getElementById('quiz-list');
-        answerList.remove();
-        quizD.innerHTML = "Thanks for playing!"
-        let quizS = document.getElementById('quiz-score');
-        let quizI = `<h3>Your score is ${score}</h3>`;
-        quizS.innerHTML = quizI;*/
+
     };
     let qq = allQuestions[i].question;
         let quizD = document.getElementById('quiz-line');
@@ -272,10 +266,8 @@ function finalScore() {
         let answerList = document.getElementById('quiz-list');
         answerList.remove();
         quizD.innerHTML = "Thanks for playing!"
-        let quizS = document.getElementById('quiz-score');
-        let quizI = `<h3>Your score is ${score}</h3>
-        <button type="submit" id="rank" onclick="starfleetRank();">Is Starfleet the career for you?</button>`;
-        quizS.innerHTML = quizI;
+        let quizI = `<button type="submit" id="rank" onclick="starfleetRank();">Is Starfleet the career for you?</button>`;
+        quizN.innerHTML = quizI;
 }
 
 let finalImages = [

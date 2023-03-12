@@ -22,14 +22,21 @@ h1 {
     text-shadow: 1px 1px 1px black;
 }
 
-h2 {
-    color:antiquewhite;
+#application-h {
+    color: rgba(0,0,255,1);
+    text-shadow: 1px 1px 1px black;
+}
+
+
+#motto {
+    color:honeydew;
     text-align: center;
 }
 
-h3 {
-    color: rgba(0,0,255,1);
+legend {
     font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
 }
 
 button {
@@ -46,12 +53,47 @@ img {
     border-radius: 2%;
 }
 
+#quiz-score {
+    position: absolute;
+    top: 550px;
+    left: 710px;
+}
+
+
 #quiz-reset {
     position: absolute;
     top: 650px;
-    left: 718px;
+    left: 710px;
 }
 
 fieldset {
+    text-align: center;
+    padding:20px;
+}
+
+label {
+    display: block;
+    margin: 0 auto;
+    width:40%;
+    padding: 10px;
+}
+
+p {
+    margin:0 auto;
+    max-width: 45%;
+}
+
+#end {
+    padding: 20px;
+}
+
+input {
 
 }
+
+#submit {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+

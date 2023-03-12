@@ -12,11 +12,12 @@
     <div id="base">
         <header>
             <a href="index.html"><h1>STAR TREK QUIZ</h1></a>
-            <h3>Application</h3>
+            <h2 id="application-h">Application</h2>
         </header>
         <main>
             <form id="application-form">
             <fieldset >
+                <legend>Name and personal info</legend>
                 <label for="name">
                     Please provide your name<input id="name" type="text" name="name" placeholder="John Smith" required />
                 </label>
@@ -28,9 +29,13 @@
                     Please provide your age<input id="number" type="number" name="age" min="17"
                     max="147" placeholder="18" required />
                 </label>
+                <label for="location">
+                    Please provide your current area/planet of residence<input id="location" type="text" name="location" placeholder="Olympus Mons, Mars" required />
+                </label>
             </fieldset>
 
             <fieldset >
+                <legend>Career and experience</legend>
                 <label for="field">Please advise which dept you want to enter in Starfleet service
                     <select id="field" type="dropdown" name="field">
                         <option value="command">Command</option>
@@ -41,9 +46,12 @@
                         <option value="engineering">Engineering</option>
                     </select>
                 </label>
+                <label for="experience">Please provide some information regarding your education,<br> training, work experience or general life experience<br>
+                <textarea id="experience" name="experience" rows="10" cols="30"></textarea> 
             </fieldset>
 
             <fieldset >
+                <legend>Medical information - Human </legend>
                 <p>If you are a member of the human species, please complete this part of the form. Non-human applicants, please skip this section and complete the below section</p>
                 <label for="sex">Male<input type="radio" id="sex" name="sex"
                         value="Male" />
@@ -53,6 +61,7 @@
                 </label>
                 <label for="gender-label">Please provide info regarding your gender / preference
                     <select id="gender" type="dropdown" name="gender">
+                        <option value="none-selected"></option>
                         <option value="man(he/him)">man(he)</option>
                         <option value="woman(she/her)">woman(she)</option>
                         <option vlaue="non-binary(they/them)">non-binary(they/them)</option>
@@ -63,9 +72,12 @@
                     Please provide details (if any) of historical medical conditions within your family
                     <input id="medical-history" type="text" name="medical-history"/>
                 </label>
+                <label for="experience">Please provide details if you are suffering from any medical conditions currently, indicate any effects they may have on your service at Starfleet<br> 
+                    <textarea id="experience" name="experience" rows="10" cols="30" placeholder="(for example if you are visually impaired and wish to work in stellar cartography, our medical team may be able to provide you with an occular visor)"></textarea> 
             </fieldset>
 
             <fieldset >
+                <legend>Non-human applicant info</legend>
                 <p>If you are a member of any non-human species, please complete this section of the form</p>
                 <label for="species">Please indicate if you are a member of any of the following non-human species
                     <select id="species" type="dropdown" name="race">
@@ -87,7 +99,6 @@
                 <label for="species-other">If your species is not listed above, please provide it here
                     <input type="text" id="species-other" name="species-other">
                 </label>
-
                 <p>If your species has classification based on bioligical sex , please indicate yours here</p>
                 <label for="species-sex">Male<input type="radio" id="species-sex" name="species-sex"
                         value="Male" />
@@ -99,25 +110,30 @@
                     value="Other" />
                 </label>
                 <label for="species-info">Please provide any relevant information regarding your species. This could include living requirements, clothes type/sizing, medical/dietary concerns, religious/spiritual ideologies etc
-                <input type="text" id="species-info" name="species-info">
+                    <textarea id="species-info" name="species-info" rows="10" cols="30"></textarea> 
                 </label>
             </fieldset>
 
             <fieldset >
+                <legend>Why do you wish to join Starfleet?</legend>
                 <label for="essay">Please write a short paragraph, on why you wish to join Starfleet
-                <input type="text" id="essay" name="essay">
+               <textarea id="essay" name="essay" rows="10" cols="30"></textarea> 
             </label>
             </fieldset>
 
             <fieldset >
+                <legend>Final details</legend>
                 <label for="tc">Please indicate if you accept the terms and conditions <input
                     type="checkbox" id="tc" name="tc" value="tc" required /></label>
             <label class="checkbox">Please indicate if you wish to sign up to our newsletter <input
                     type="checkbox" name="newsletter" value="newsletter" /> </label>
             <label class="checkbox">Please indicate if you or a family member <br> are now, or have ever been , a part of the Borg collective <input type="checkbox" name="collective" value="collective" /> </label>
             </fieldset>
-
-            </form>
+            
+            <div id="end"><p>Thank you for taking the time to complete this form and apply to Starfleet. This is the first step in an endless adventure, taking humanity beyond the infinite. The cosmos, our own consciousness, the nature of reality ; each of these is just another horizon, to which we will boldly set sail. The way we choose to live our lives , is a trial of sorts. We are all being tested , our very existence is a trial to determine if we are worthy of our place in the universe. And remember friend,<br>
+            <b>the trial never ends</b></p>
+            </div>
+            <input id="submit" type="submit" value="submit"></input>
         </main>
         </div>
         <footer>
