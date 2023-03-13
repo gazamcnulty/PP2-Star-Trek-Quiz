@@ -120,12 +120,10 @@ const answerText = `
 function runGame() {
     welcomeA.remove();
     quizI.innerHTML = `${allImages[i]}`;
-
-        quizQ.innerHTML = allQuestions[i].question;
-
+        quizQ.innerHTML = `<br>${allQuestions[i].question}`;
         answerList.innerHTML = answerText;
-        quizR.innerHTML = `<br></br>`;
-        quizS.innerHTML =  `<br></br>`;
+        /*quizR.innerHTML = `<br></br>`;
+        quizS.innerHTML =  `<br></br>`;*/
         let reset = document.getElementById('quiz-reset');
         reset.innerHTML = `<a href="index.html"><button onclick="">Click here to reset the game</button></a>`;
         
@@ -139,7 +137,6 @@ function runGame() {
 
 function checkA() {
     quizQ.innerHTML = ``;
-
     quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
     if(allQuestions[i].answers[0].includes(true)) {
         answerList.innerHTML = `<p>That's the right answer!</p>`;
@@ -155,7 +152,6 @@ function checkA() {
 
 function checkB() {
     quizQ.innerHTML = ``;
-
     quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
     if(allQuestions[i].answers[1].includes(true)) {
         answerList.innerHTML = `<p>That's the right answer!</p>`;
@@ -171,7 +167,6 @@ function checkB() {
 
 function checkC() {
     quizQ.innerHTML = ``;
-
     quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
     if(allQuestions[i].answers[2].includes(true)) {
         answerList.innerHTML = `<p>That's the right answer!</p>`;
@@ -188,7 +183,6 @@ function checkC() {
 
 function checkD() {
     quizQ.innerHTML = ``;
-
     quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
     if(allQuestions[i].answers[3].includes(true)) {
         answerList.innerHTML = `<p>That's the right answer!</p>`;
@@ -225,7 +219,7 @@ function nextQuestion() {
     if (i >= 10 ) {
         finalScore();
     };
-        quizQ.innerHTML = allQuestions[i].question;
+    quizQ.innerHTML = `<br>${allQuestions[i].question}`;
         answerList.innerHTML = `
         <button onclick="checkA();">${allQuestions[i].answers[0][0]}</button>
         <button onclick="checkB();">${allQuestions[i].answers[1][0]}</button>
@@ -275,7 +269,7 @@ function starfleetRank () {
     quizI.innerHTML = `${finalImages[score]}`;
     quizS.remove();
         quizQ.innerHTML = `${suggestedRank[score]}`;
-        quizN.innerHTML = `<a href="application.html">Click here to apply</a>`;
+        quizN.innerHTML = `<a id ="application-link" href="application.html">Click here to apply</a>`;
 };
 
 

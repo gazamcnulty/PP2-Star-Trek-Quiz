@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/space3.jpeg");
+    background-image: url("../images/nebula.jpg");
     background-size: cover;
     
     
@@ -7,9 +7,8 @@ body {
 
 #base {
     background-color: rgb(170, 176, 180);
-    height: 80%;
-    width:80%;
-    min-height: 700px;
+    width:75%;
+    min-height: 750px;
     margin: 0 auto;
     text-align: center;
     border-radius: 5%;
@@ -20,7 +19,13 @@ body {
 h1 {
     color: rgb(33, 109, 195);
     text-shadow: 1px 1px 1px black;
-    font-size: 50px;
+    font-size: 3em;
+    font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
+}
+
+img {
+    height: 300px;
+    border-radius: 2%;
 }
 
 h3 {
@@ -30,8 +35,9 @@ h3 {
 }
 
 p {
-    color: rgb(33, 109, 195);
+    color: rgb(29, 81, 139);
     font-size: 1.2em;
+    font-family: 'Exo 2', Geneva, Tahoma, sans-serif;
     margin:0 auto;
     padding: 10px;
     max-width: 60%;
@@ -41,11 +47,28 @@ a {
     text-decoration: none;
 }
 
+#application-link {
+    font-size: 1.5em;
+    text-decoration:underline;
+}
+
 #application-h {
     color: rgb(33, 109, 195);
     text-shadow: 1px 1px 1px black;
+    font-size: 2em;
+    font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
 }
 
+.form-p {
+    font-size: 1em;
+    font-style: italic;
+    color: black;
+}
+
+#signoff {
+    font-size: 1em;
+    font-style: normal;
+}
 
 #motto {
     color:honeydew;
@@ -61,16 +84,13 @@ legend {
 button {
     width: 100px;
     height: 50px;
+    font-family: 'Exo 2', Geneva, Tahoma, sans-serif;
     vertical-align: middle;
     color: white;
     background-color: rgb(33, 109, 195);
     
 }
 
-img {
-    height: 200px;
-    border-radius: 2%;
-}
 
 #quiz-score {
     /*position: absolute;
@@ -119,7 +139,7 @@ label {
 }
 
 input {
-
+    
 }
 
 #submit {
