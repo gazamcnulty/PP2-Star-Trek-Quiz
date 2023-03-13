@@ -89,7 +89,7 @@ let i = 0;
 const quizR = document.getElementById('quiz-result');
 
 const quizN = document.getElementById('quiz-next');
-
+let quizS = document.getElementById('quiz-score');
 
 
 //below function ' runGame()' runs after clicking the start game button
@@ -130,6 +130,10 @@ function runGame() {
         `;
         answerList.innerHTML = answerText;
         quizA.appendChild(answerList);
+        quizR.innerHTML = `<br></br>`;
+        quizS.innerHTML =  `<br></br>`
+        quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
+
         let reset = document.getElementById('quiz-reset');
         reset.innerHTML = `<a href="index.html"><button onclick="">Click here to reset the game</button></a>`;
         
@@ -156,7 +160,7 @@ function checkA() {
     };
     console.log(score);
     let quizS = document.getElementById('quiz-score');
-    let quizI = `<h3>Your score is ${score}</h3>`;
+    let quizI = `<p>Your score is ${score}</p>`;
     quizS.innerHTML = quizI;
     }
 
@@ -175,7 +179,7 @@ function checkB() {
     };
     console.log(score);
     let quizS = document.getElementById('quiz-score');
-    let quizI = `<h3>Your score is ${score}</h3>`;
+    let quizI = `<p>Your score is ${score}</p>`;
     quizS.innerHTML = quizI;
     }
 
@@ -194,7 +198,7 @@ function checkC() {
     };
     console.log(score);
     let quizS = document.getElementById('quiz-score');
-    let quizI = `<h3>Your score is ${score}</h3>`;
+    let quizI = `<p>Your score is ${score}</p>`;
     quizS.innerHTML = quizI;
     }
 
@@ -214,7 +218,7 @@ function checkD() {
     };
     console.log(score);
     let quizS = document.getElementById('quiz-score');
-    let quizI = `<h3>Your score is ${score}</h3>`;
+    let quizI = `<p>Your score is ${score}</p>`;
     quizS.innerHTML = quizI;
     }
 
