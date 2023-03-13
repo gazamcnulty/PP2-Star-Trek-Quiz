@@ -31,8 +31,10 @@ h3 {
 
 p {
     color: rgb(33, 109, 195);
+    font-size: 1.2em;
     margin:0 auto;
-    max-width: 45%;
+    padding: 10px;
+    max-width: 60%;
 }
 
 a {
@@ -76,13 +78,27 @@ img {
     left: 710px;*/
 }
 
+#reset-container {
+    position: relative;
+    height: 100px;
+    margin-bottom: 0;
+}
 
 #quiz-reset {
-    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 5px;
 }
 
 #quiz-next {
     margin-bottom: 0;
+}
+
+#suggestion-p {
+    font-size: 1em;
+    width:75%;
 }
 
 fieldset {

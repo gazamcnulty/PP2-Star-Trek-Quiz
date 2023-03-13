@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let welcomeA = document.getElementById('welcome-area');
     welcomeA.innerHTML = `
     <img src="assets/images/enterprise-front.JPG" alt="a starship in space" id="image">
-    <h3 id="welcome">Click the button to start the game!</h3>
+    <p id="welcome">Click the button to start the game!</p>
             <button type="submit" id="start" onclick="runGame();">Start Game</button>
             `;
     }
@@ -86,11 +86,23 @@ let allImages = [image1, image2, image3, image4, image5, image6, image7, image8,
 /*'score' and 'i' will be incremented as the game progresses. 'i' is used to target the next question/answer on each round*/
 let score = 0;
 let i = 0;
+
+const welcomeA = document.getElementById('welcome-area');
+const quizI = document.getElementById('quiz-image');
+const quizA = document.getElementById('quiz-area');
+const quizQ = document.getElementById('question-area');
+const qq = allQuestions[i].question;
 const quizR = document.getElementById('quiz-result');
-
 const quizN = document.getElementById('quiz-next');
-let quizS = document.getElementById('quiz-score');
+const quizS = document.getElementById('quiz-score');
+const answerList = document.getElementById('answer-list');
 
+const answerText = `
+        <button onclick="checkA();">${allQuestions[i].answers[0][0]}</button>
+        <button onclick="checkB();">${allQuestions[i].answers[1][0]}</button>
+        <button onclick="checkC();">${allQuestions[i].answers[2][0]}</button>
+        <button onclick="checkD();">${allQuestions[i].answers[3][0]}</button>
+        `;
 
 //below function ' runGame()' runs after clicking the start game button
 // targets the welcome area and removes it 
@@ -106,34 +118,14 @@ let quizS = document.getElementById('quiz-score');
 //buttons have onclick to target checkAnswer functions, they target the answer by array indexing
 //puts buttons html into the answerList variable, this is then made a child of the quiz-area div
 function runGame() {
-    let welcomeA = document.getElementById('welcome-area');
     welcomeA.remove();
-
-    let quizI = document.getElementById('quiz-image');
     quizI.innerHTML = `${allImages[i]}`;
 
+        quizQ.innerHTML = allQuestions[i].question;
 
-        let qq = allQuestions[i].question;
-        let quizD = document.createElement("h3");
-        quizD.setAttribute("id", "quiz-line");
-        let quizA = document.getElementById('quiz-area');
-        quizD.innerHTML = qq;
-        quizA.appendChild(quizD);
-
-        let answerList = document.createElement("div");
-        answerList.setAttribute("id", "quiz-list");
-        let answerText = `
-        <button onclick="checkA();">${allQuestions[i].answers[0][0]}</button>
-        <button onclick="checkB();">${allQuestions[i].answers[1][0]}</button>
-        <button onclick="checkC();">${allQuestions[i].answers[2][0]}</button>
-        <button onclick="checkD();">${allQuestions[i].answers[3][0]}</button>
-        `;
         answerList.innerHTML = answerText;
-        quizA.appendChild(answerList);
         quizR.innerHTML = `<br></br>`;
-        quizS.innerHTML =  `<br></br>`
-        quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-
+        quizS.innerHTML =  `<br></br>`;
         let reset = document.getElementById('quiz-reset');
         reset.innerHTML = `<a href="index.html"><button onclick="">Click here to reset the game</button></a>`;
         
@@ -146,17 +138,14 @@ function runGame() {
 //if was incorrect, it confirms it was incorrect, it does not increment score and runs 'nextQuestion()' function
 
 function checkA() {
+    quizQ.innerHTML = ``;
 
+    quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
     if(allQuestions[i].answers[0].includes(true)) {
-        /*alert("You chose the correct answer! Score increased by 1");*/
-        quizR.innerHTML = `<p>That's the right answer!</p>`;
+        answerList.innerHTML = `<p>That's the right answer!</p>`;
         score ++; 
-        quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-        
     }else  {
-        quizR.innerHTML = `<p>That's the wrong answer</p>`;
-        quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-          /*alert("Unfortunately you chose the wrong answer!");*/
+        answerList.innerHTML = `<p>That's the wrong answer</p>`;
     };
     console.log(score);
     let quizS = document.getElementById('quiz-score');
@@ -165,17 +154,14 @@ function checkA() {
     }
 
 function checkB() {
+    quizQ.innerHTML = ``;
 
+    quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
     if(allQuestions[i].answers[1].includes(true)) {
-        /*alert("You chose the correct answer! Score increased by 1");*/
-        quizR.innerHTML = `<p>That's the right answer!</p>`;
-        score ++; 
-        quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-        
+        answerList.innerHTML = `<p>That's the right answer!</p>`;
+        score ++;  
     }else  {
-        quizR.innerHTML = `<p>That's the wrong answer</p>`;
-        quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-          /*alert("Unfortunately you chose the wrong answer!");*/
+        answerList.innerHTML = `<p>That's the wrong answer</p>`;
     };
     console.log(score);
     let quizS = document.getElementById('quiz-score');
@@ -184,17 +170,14 @@ function checkB() {
     }
 
 function checkC() {
-    
+    quizQ.innerHTML = ``;
+
+    quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
     if(allQuestions[i].answers[2].includes(true)) {
-        /*alert("You chose the correct answer! Score increased by 1");*/
-        quizR.innerHTML = `<p>That's the right answer!</p>`;
-        score ++; 
-        quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-        
-    }else  {
-        quizR.innerHTML = `<p>That's the wrong answer</p>`;
-        quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-          /*alert("Unfortunately you chose the wrong answer!");*/
+        answerList.innerHTML = `<p>That's the right answer!</p>`;
+        score ++;    
+    } else  {
+        answerList.innerHTML = `<p>That's the wrong answer</p>`;
     };
     console.log(score);
     let quizS = document.getElementById('quiz-score');
@@ -204,19 +187,15 @@ function checkC() {
 
 
 function checkD() {
-    
+    quizQ.innerHTML = ``;
+
+    quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
     if(allQuestions[i].answers[3].includes(true)) {
-        /*alert("You chose the correct answer! Score increased by 1");*/
-        quizR.innerHTML = `<p>That's the right answer!</p>`;
+        answerList.innerHTML = `<p>That's the right answer!</p>`;
         score ++; 
-        quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-        
     }else  {
-        quizR.innerHTML = `<p>That's the wrong answer</p>`;
-        quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-          /*alert("Unfortunately you chose the wrong answer!");*/
+        answerList.innerHTML = `<p>That's the wrong answer</p>`;
     };
-    console.log(score);
     let quizS = document.getElementById('quiz-score');
     let quizI = `<p>Your score is ${score}</p>`;
     quizS.innerHTML = quizI;
@@ -237,39 +216,28 @@ function checkD() {
 function nextQuestion() {
     quizR.innerHTML = ``;
     quizN.innerHTML = ``;
+    
     i++;
-
+    
     let quizI = document.getElementById('quiz-image');
     quizI.innerHTML = `${allImages[i]}`;
 
     if (i >= 10 ) {
         finalScore();
-
     };
-    let qq = allQuestions[i].question;
-        let quizD = document.getElementById('quiz-line');
-        let quizA = document.getElementById('quiz-area');
-        quizD.innerHTML = qq;
-        quizA.appendChild(quizD);
-
-        let answerList = document.getElementById('quiz-list');
-        let answerText = `
+        quizQ.innerHTML = allQuestions[i].question;
+        answerList.innerHTML = `
         <button onclick="checkA();">${allQuestions[i].answers[0][0]}</button>
         <button onclick="checkB();">${allQuestions[i].answers[1][0]}</button>
         <button onclick="checkC();">${allQuestions[i].answers[2][0]}</button>
         <button onclick="checkD();">${allQuestions[i].answers[3][0]}</button>
         `;
-        answerList.innerHTML = answerText;
-        quizA.appendChild(answerList);
     
-
 }
 
 function finalScore() {
-    let quizD = document.getElementById('quiz-line');
-        let answerList = document.getElementById('quiz-list');
         answerList.remove();
-        quizD.innerHTML = "Thanks for playing!"
+        quizQ.innerHTML = "Thanks for playing!"
         let quizI = `<button type="submit" id="rank" onclick="starfleetRank();">Is Starfleet the career for you?</button>`;
         quizN.innerHTML = quizI;
 }
@@ -289,32 +257,25 @@ let finalImages = [
 ]
 
 let suggestedRank = [
-    `<p>Your score was 0 out of 10, yet you still seek a place in Starfleet? You posess unflinching determination, even in the face of inevitable failure. Akin to someone tending a garden, knowing full well the plants will eventually wither. Your would make a fine gardener, like Boothby, beloved groundskeeper of Starfleet academy.</p>` , 
-    `<p>Your score was 1 out of 10, you have made the first step towards serving in Starfleet. Everyone can make a difference, regardless of career aptitude. While Starfleet academy might be outside your scope, you could always enlist directly in Starfleet. Without pursuing the high end career like others in the academy, this gets you right in the action. You could rise to the rank of petty officer, start your journey for a more grounded path to the stars.</p>` , 
-    `<p>Your score was 2 out of 10, you are a long way from the captain's chair. But every great journey begins with a small step. If you are determined, then consider joining Starfleet academy. As a Cadet trainee, you will receive a robust education and an opportunity to explore many avenues of starship service, including command, operations and sciences.</p>` ,
-    `<p>Your score was 3 out of 10, you're not just the average Pakled. You have the aptitude of Starfleet Academy graduate, with the rank of Ensign. Your service aboard the ship has only just begun, but remember , the trial never ends</p>` , 
-    `<p>Your score was 4 out of 10, you might be the wisest Klingon of the house. You would be well suited to begin training in the officer's program and would be easily considered for the rank of Lieutenant. You've proven you can take command, how far are you willing to go? </p>` ,
-    `<p>Your score was 5 out of 10, you are as observant as any Betazoid. With your impressive knowledge of Starfleet activity, you could certainly rise to the rank of Lieutenant Commander. An impressive achievement for anyone, and a stonesthrow from ship XO position of commander. You've got the stuff, but how much stuff is the question</p>` , 
-    `<p>Your score was 6 out of 10, you are conniving as any Romulan. You have the drive to suceed and there's no reason you couldn't ascend to the impressive rank of Commander, 1st officer of the ship and XO, ranking just below the Captain.Your path starts here...but lets not pretend you don't covet the captain's chair</p>` ,
-    `<p>Your score was 7 out of 10, you are as wise as any Vulcan. You have the charisma, the focus and sheer force of will to ascend to the coveted rank of Captain. You are responsible for the lives of the hundreds of crew serving under you, while also shouldering the responsibility of leading by example while representing Starfleet. You are one in a million</p>` ,
-    `<p>Your score was 8 out of 10, you have the intellect of a genetically altered superman of the Eugenics wars. The Captain's chair is not enough for you and by the prophets will Starfleet recognise it. You are clearly fit to be an Admiral of Starfleet, in command of major sectors of Starfleet and acting as department head at Starfleet headquarters. Your decisions will affect the destiny of the galaxy</p>` , 
-    `<p>Your score was 9 out of 10, you have the intelligence, strength and energy of a positronic Android. Starfleet was too small for you, after all, managing the activity of thousands of Starships is small change, when you could influence the entire United Federation of Planets. You could be President of the Federation, signing new laws into effect, brokering peace with unknowable civilizations and stretching the fate of the cosmos like strings on a violin. You are one in a galaxy</p>` , 
-    `<p>Your score was 10 out of 10 - but you already knew that didn't you? You knew what the score would be before you started the quiz, you knew what the score would be before I even thought of making the quiz. You don't just know things... you KNOW. Omnipotence is a frightening concept to many, but to you its just another 11 letter word in your frighteningly diverse vocabulary. You are obviously a member of the Q continuom, an immortal being posessing omnipotence and omniscience, deigning to play with mortals such as us for your amusement. With a click of a button you could change reality... so whats stopping you?</p>`
+    `<p id="suggestion-p">Your score was 0 out of 10, yet you still seek a place in Starfleet? You posess unflinching determination, even in the face of inevitable failure. Akin to someone tending a garden, knowing full well the plants will eventually wither. Your would make a fine gardener, like Boothby, beloved groundskeeper of Starfleet academy.</p>` , 
+    `<p id="suggestion-p">Your score was 1 out of 10, you have made the first step towards serving in Starfleet. Everyone can make a difference, regardless of career aptitude. While Starfleet academy might be outside your scope, you could always enlist directly in Starfleet. Without pursuing the high end career like others in the academy, this gets you right in the action. You could rise to the rank of petty officer, start your journey for a more grounded path to the stars.</p>` , 
+    `<p id="suggestion-p">Your score was 2 out of 10, you are a long way from the captain's chair. But every great journey begins with a small step. If you are determined, then consider joining Starfleet academy. As a Cadet trainee, you will receive a robust education and an opportunity to explore many avenues of starship service, including command, operations and sciences.</p>` ,
+    `<p id="suggestion-p">Your score was 3 out of 10, you're not just the average Pakled. You have the aptitude of Starfleet Academy graduate, with the rank of Ensign. Your service aboard the ship has only just begun, but remember , the trial never ends</p>` , 
+    `<p id="suggestion-p">Your score was 4 out of 10, you might be the wisest Klingon of the house. You would be well suited to begin training in the officer's program and would be easily considered for the rank of Lieutenant. You've proven you can take command, how far are you willing to go? </p>` ,
+    `<p id="suggestion-p">Your score was 5 out of 10, you are as observant as any Betazoid. With your impressive knowledge of Starfleet activity, you could certainly rise to the rank of Lieutenant Commander. An impressive achievement for anyone, and a stonesthrow from ship XO position of commander. You've got the stuff, but how much stuff is the question</p>` , 
+    `<p id="suggestion-p">Your score was 6 out of 10, you are conniving as any Romulan. You have the drive to suceed and there's no reason you couldn't ascend to the impressive rank of Commander, 1st officer of the ship and XO, ranking just below the Captain.Your path starts here...but lets not pretend you don't covet the captain's chair</p>` ,
+    `<p id="suggestion-p">Your score was 7 out of 10, you are as wise as any Vulcan. You have the charisma, the focus and sheer force of will to ascend to the coveted rank of Captain. You are responsible for the lives of the hundreds of crew serving under you, while also shouldering the responsibility of leading by example while representing Starfleet. You are one in a million</p>` ,
+    `<p id="suggestion-p">Your score was 8 out of 10, you have the intellect of a genetically altered superman of the Eugenics wars. The Captain's chair is not enough for you and by the prophets will Starfleet recognise it. You are clearly fit to be an Admiral of Starfleet, in command of major sectors of Starfleet and acting as department head at Starfleet headquarters. Your decisions will affect the destiny of the galaxy</p>` , 
+    `<p id="suggestion-p">Your score was 9 out of 10, you have the intelligence, strength and energy of a positronic Android. Starfleet was too small for you, after all, managing the activity of thousands of Starships is small change, when you could influence the entire United Federation of Planets. You could be President of the Federation, signing new laws into effect, brokering peace with unknowable civilizations and stretching the fate of the cosmos like strings on a violin. You are one in a galaxy</p>` , 
+    `<p id="suggestion-p">Your score was 10 out of 10 - but you already knew that didn't you? You knew what the score would be before you started the quiz, you knew what the score would be before I even thought of making the quiz. You don't just know things... you KNOW. Omnipotence is a frightening concept to many, but to you its just another 11 letter word in your frighteningly diverse vocabulary. You are obviously a member of the Q continuom, an immortal being posessing omnipotence and omniscience, deigning to play with mortals such as us for your amusement. With a click of a button you could change reality... so whats stopping you?</p>`
 ]
 
 function starfleetRank () {
     let quizI = document.getElementById('quiz-image');
     quizI.innerHTML = `${finalImages[score]}`;
-    let quizS = document.getElementById('quiz-score');
     quizS.remove();
-    let quizD = document.getElementById('quiz-line');
-        quizD.innerHTML = `${suggestedRank[score]}`;
+        quizQ.innerHTML = `${suggestedRank[score]}`;
         quizN.innerHTML = `<a href="application.html">Click here to apply</a>`;
-        
-        /*<button type="submit" id="apply" onclick="application();">click here to apply to Starfleet</button>`;
-        /*let quizS = document.getElementById('quiz-score');
-        let quizI = `${suggestedRank[score]}`;
-        quizS.innerHTML = quizI;*/
 };
 
 
