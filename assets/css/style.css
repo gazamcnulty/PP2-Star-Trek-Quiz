@@ -40,7 +40,7 @@ p {
     font-family: 'Exo 2', Geneva, Tahoma, sans-serif;
     margin:0 auto;
     padding: 10px;
-    max-width: 60%;
+    max-width: 65%;
 }
 
 a {
@@ -66,7 +66,7 @@ a {
 }
 
 #signoff {
-    font-size: 1em;
+    font-size: 1.2em;
     font-style: normal;
 }
 

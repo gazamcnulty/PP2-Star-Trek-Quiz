@@ -13,75 +13,74 @@ document.addEventListener("DOMContentLoaded", function() {
 /*below are a series of objects for the questions and answers, each assigned to a variable. the object contains keys of questions and answers , the answers key is an array , with each option as an index in the array*/
 
 
-let firstQuestion = {
+let allQuestions = [ 
+    firstQuestion = {
     question: "What is the name of Data's cat?",
-    answers: [ ['Fluffy'], ['Spot', true], ["Lt Commander Whiskers"], ['William']]
-};
+    answers: [ ['Fluffy'], ['Spot', 'correct'], ["Lt Commander Whiskers"], ['William']]
+    } ,
+    secondQuestion = {
+        question: "What is Picard's favourite beverage?",
+        answers: [['Black coffee'], ['Hot chocolate'], ['Earl grey tea', 'correct'], ['Espresso']]
+    } ,
 
+    thirdQuestion = {
+        question: "What is the name of the Klingon sword?",
+        answers: [["Bat'leth", 'correct'],  ["Qaplah"], ["Lightsabre"], ["Bird of prey"]]
+    } ,
 
-let secondQuestion = {
-    question: "What is Picard's favourite beverage?",
-    answers: [['Black coffee'], ['Hot chocolate'], ['Earl grey tea', true], ['Espresso']]
-};
+    fourthQuestion = {
+        question: "What starship technology is used by Klingons and Romulans, but not by Starfleet?",
+        answers: [ ['Warp drive'], ['Cloaking invisibility', 'correct'], ['Quantum missiles'], ['Time travel']]
+    } ,
 
-let thirdQuestion = {
-    question: "What is the name of the Klingon sword?",
-    answers: [["Bat'leth", true],  ["Qaplah"], ["Lightsabre"], ["Bird of prey"]]
-};
+    fifthQuestion = {
+        question: "What game did the bridge officers of the Enterprise-D play on a regular basis?",
+        answers: [ ['Scrabble'], ['Poker', 'correct'], ["Darts"], ['Rugby']]
+    } ,
 
-let fourthQuestion = {
-    question: "What starship technology is used by Klingons and Romulans, but not by Starfleet?",
-    answers: [ ['Warp drive'], ['Cloaking invisibility', true], ['Quantum missiles'], ['Time travel']]
-};
+    sixthQuestion = {
+        question: "Who was the transporter chief, for the first few years of the Enterprise-D's operation?",
+        answers: [ ['Guinan'], ['Jordy Laforge', ], ["Miles O'Brien", 'correct'], ['Leonard McCoy']]
+    } ,
 
-let fifthQuestion = {
-    question: "What game did the bridge officers of the Enterprise-D play on a regular basis?",
-    answers: [ ['Scrabble'], ['Poker', true], ["Darts"], ['Rugby']]
-};
+    seventhQuestion = {
+        question: "What ship did Picard command, prior to the Enterprise?",
+        answers: [ ['The Excelsior'], ['The Reliant'], ['The Milennium Falcon'], ['The Stargazer', 'correct']]
+    } ,
 
-let sixthQuestion = {
-    question: "Who was the transporter chief, for the first few years of the Enterprise-D's operation?",
-    answers: [ ['Guinan'], ['Jordy Laforge', ], ["Miles O'Brien", true], ['Leonard McCoy']]
-};
+    eigthQuestion = {
+        question: "What killed all the people on Data's home Omicron Theta?",
+        answers: [ ['Lore'], ['The Crystalline Entity', 'correct'], ["Noonian Singh"], ['Khan']]
+    } ,
 
-let seventhQuestion = {
-    question: "What ship did Picard command, prior to the Enterprise?",
-    answers: [ ['The Excelsior'], ['The Reliant'], ['The Milennium Falcon'], ['The Stargazer', true]]
-};
+    ninthQuestion = {
+        question: "When Picard was assimilated by the Borg, he unwittingly led the Borg in battle and wiped out hundred's of starships. Where in space did this battle take place?",
+        answers: [ ['Wolf-359', 'correct'], ["Earth's orbit"], ["Talos-4"], ['Vulcan']]
+    } ,
 
-let eigthQuestion = {
-    question: "What killed all the people on Data's home Omicron Theta?",
-    answers: [ ['Lore'], ['The Crystalline Entity', true], ["Noonian Singh"], ['Khan']]
-};
-
-let ninthQuestion = {
-    question: "When Picard was assimilated by the Borg, he unwittingly led the Borg in battle and wiped out hundred's of starships. Where in space did this battle take place?",
-    answers: [ ['Wolf-359', true], ["Earth's orbit"], ["Talos-4"], ['Vulcan']]
-};
-
-let tenthQuestion = {
-    question: "What was the name of the terrorist group who split off from the Federation, to lead an underground campaign against the Cardassians?",
-    answers: [ ['Starfleet Rebels'], ['The Maquis', true], ["Newfleet"], ['Anti-Card']]
-};
+    tenthQuestion = {
+        question: "What was the name of the terrorist group who split off from the Federation, to lead an underground campaign against the Cardassians?",
+        answers: [ ['Starfleet Rebels'], ['The Maquis', 'correct'], ["Newfleet"], ['Anti-Card']]
+    } ];
 
 /*here I have placed the 10 questions variables into an array, so that they can be targetted via array indexing*/
-let allQuestions = [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eigthQuestion, ninthQuestion, tenthQuestion ];
+/*let allQuestions = [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eigthQuestion, ninthQuestion, tenthQuestion ];*/
 
 /*same as with the Qs and As, I have assigned images to variables, but I have used template literals for html coding. these variables can be called on by targetting the variable name with .innerHTML when manipulating the DOM*/
-let image1 = `<img src="assets/images/data-spot.JPG" alt="Data with his cat" id="image">`;
-let image2 = `<img src="assets/images/picard-beverage.JPG" alt="Picard with a drink" id="image">`;
-let image3 = `<img src="assets/images/worf-bat'leth.JPG" alt="Worf holding a Klingon sword" id="image">`;
-let image4 = `<img src="assets/images/ships.JPG" alt="Romulan and Klingon ships" id="image">`;
-let image5 = `<img src="assets/images/game.JPG" alt="Data playing a game" id="image">`;
-let image6 = `<img src="assets/images/transporter.JPG" alt="A person who has beamed in on a transporter" id="image">`;
-let image7 = `<img src="assets/images/stargazer.JPG" alt="An old starship" id="image">`;
-let image8 = `<img src="assets/images/omicron-theta.JPG" alt="Data's home planet" id="image">`;
-let image9 = `<img src="assets/images/Locutus.JPG" alt="Picard post-assimilation" id="image">`;
-let image10 = `<img src="assets/images/Ro.JPG" alt="Ro Laren holding a phaser" id="image">`;
-let image11 = `<img src="assets/images/thanks.JPG" alt="Picard holding a beer" id="image">`;
+let allImages = [`<img src="assets/images/data-spot.JPG" alt="Data with his cat" id="image">`,
+    `<img src="assets/images/picard-beverage.JPG" alt="Picard with a drink" id="image">`,
+    `<img src="assets/images/worf-bat'leth.JPG" alt="Worf holding a Klingon sword" id="image">`,
+    `<img src="assets/images/ships.JPG" alt="Romulan and Klingon ships" id="image">`,
+    `<img src="assets/images/game.JPG" alt="Data playing a game" id="image">`,
+    `<img src="assets/images/transporter.JPG" alt="A person who has beamed in on a transporter" id="image">`,
+    `<img src="assets/images/stargazer.JPG" alt="An old starship" id="image">`,
+    `<img src="assets/images/omicron-theta.JPG" alt="Data's home planet" id="image">`,
+    `<img src="assets/images/Locutus.JPG" alt="Picard post-assimilation" id="image">`,
+    `<img src="assets/images/Ro.JPG" alt="Ro Laren holding a phaser" id="image">`,
+    `<img src="assets/images/thanks.JPG" alt="Picard holding a beer" id="image">`];
 
 /*image variables in an array so they can be targetted*/
-let allImages = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11];
+/*let allImages = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11];/*
 
 /*'score' and 'i' will be incremented as the game progresses. 'i' is used to target the next question/answer on each round*/
 let score = 0;
@@ -138,7 +137,7 @@ function runGame() {
 function checkA() {
     quizQ.innerHTML = ``;
     quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-    if(allQuestions[i].answers[0].includes(true)) {
+    if(allQuestions[i].answers[0].includes('correct')) {
         answerList.innerHTML = `<p>That's the right answer!</p>`;
         score ++; 
     }else  {
@@ -153,7 +152,7 @@ function checkA() {
 function checkB() {
     quizQ.innerHTML = ``;
     quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-    if(allQuestions[i].answers[1].includes(true)) {
+    if(allQuestions[i].answers[1].includes('correct')) {
         answerList.innerHTML = `<p>That's the right answer!</p>`;
         score ++;  
     }else  {
@@ -168,7 +167,7 @@ function checkB() {
 function checkC() {
     quizQ.innerHTML = ``;
     quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-    if(allQuestions[i].answers[2].includes(true)) {
+    if(allQuestions[i].answers[2].includes('correct')) {
         answerList.innerHTML = `<p>That's the right answer!</p>`;
         score ++;    
     } else  {
@@ -184,7 +183,7 @@ function checkC() {
 function checkD() {
     quizQ.innerHTML = ``;
     quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-    if(allQuestions[i].answers[3].includes(true)) {
+    if(allQuestions[i].answers[3].includes('correct')) {
         answerList.innerHTML = `<p>That's the right answer!</p>`;
         score ++; 
     }else  {
@@ -269,7 +268,7 @@ function starfleetRank () {
     quizI.innerHTML = `${finalImages[score]}`;
     quizS.remove();
         quizQ.innerHTML = `${suggestedRank[score]}`;
-        quizN.innerHTML = `<a id ="application-link" href="application.html">Click here to apply</a>`;
+        quizN.innerHTML = `<a id ="application-link" href="application.html">Click here to apply to Starfleet!</a>`;
 };
 
 
