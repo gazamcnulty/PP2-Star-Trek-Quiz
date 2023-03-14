@@ -60,13 +60,14 @@
             <fieldset >
                 <legend><i class="fa-solid fa-house-medical"></i>  Medical information - Human <i class="fa-solid fa-house-medical"></i></legend>
                 <p class="form-p">If you are a member of the human species, please complete this part of the form. Non-human applicants, please skip this section and complete the below section</p>
-                <label for="sex">Male
-                    <input type="radio"class="sex" name="sex"
-                        value="Male" />
+                <p id="sex-p">Please indicate your biological sex</p>
+                <label for="male" class="radio-label">Male
+                    <input type="radio" name="sex"
+                        value="male" />
                 </label>
-                <label for="sex" class="sex">Female
-                    <input type="radio" class="sex"  name="sex"
-                        value="Female" />
+                <label for="female" class="radio-label">Female
+                    <input type="radio"  name="sex"
+                        value="female" />
                 </label>
                 <label for="gender-label">Please provide info regarding your gender / preference
                     <select id="gender-label" name="gender-label">
@@ -109,13 +110,13 @@
                     <input type="text" id="species-other" name="species-other">
                 </label>
                 <p class="form-p">If your species has classification based on bioligical sex , please indicate yours here</p>
-                <label for="species-sex">Male<input type="radio"  name="species-sex"
+                <label for="species-sex" class="radio-label">Male<input type="radio"   name="species-sex"
                         value="Male" />
                 </label>
-                <label for="species-sex">Female<input type="radio"  name="species-sex"
+                <label for="species-sex" class="radio-label">Female<input type="radio"  name="species-sex"
                         value="Female" />
                 </label>
-                <label for="species-sex">Other<input type="radio"  name="species-sex"
+                <label for="species-sex" class="radio-label">Other<input type="radio"   name="species-sex"
                     value="Other" />
                 </label>
                 <label for="species-info">Please provide any relevant information regarding your species. This could include living requirements, clothes type/sizing, medical/dietary concerns, religious/spiritual ideologies etc

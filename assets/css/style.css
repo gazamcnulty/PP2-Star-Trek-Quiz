@@ -74,6 +74,7 @@ a {
     font-size: 1.2em;
     font-style: italic;
     color: black;
+    padding: 10px;
 }
 
 #signoff {
@@ -148,13 +149,24 @@ label {
     display: block;
     margin: 0 auto;
     width:40%;
-    padding: 10px;
+    padding: 15px;
     font-family:  'Exo 2', Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
 }
 
 legend {
     font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
+}
+
+#sex-p {
+    color: black;
+    font-size: 1.2em;
+    
+}
+
+.radio-label {
+    display: inline;
+    
 }
 
 #end {

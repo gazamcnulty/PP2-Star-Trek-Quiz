@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 //on pageload, below function runs and shows welcome section
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -14,51 +16,51 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 let allQuestions = [ 
-    firstQuestion = {
+     {
     question: "What is the name of Data's cat?",
     answers: [ ['Fluffy'], ['Spot', 'correct'], ["Lt Commander Whiskers"], ['William']]
     } ,
-    secondQuestion = {
+     {
         question: "What is Picard's favourite beverage?",
         answers: [['Black coffee'], ['Hot chocolate'], ['Earl grey tea', 'correct'], ['Espresso']]
     } ,
 
-    thirdQuestion = {
+     {
         question: "What is the name of the Klingon sword?",
         answers: [["Bat'leth", 'correct'],  ["Qaplah"], ["Lightsabre"], ["Bird of prey"]]
     } ,
 
-    fourthQuestion = {
+     {
         question: "What starship technology is used by Klingons and Romulans, but not by Starfleet?",
         answers: [ ['Warp drive'], ['Cloaking invisibility', 'correct'], ['Quantum missiles'], ['Time travel']]
     } ,
 
-    fifthQuestion = {
+     {
         question: "What game did the bridge officers of the Enterprise-D play on a regular basis?",
         answers: [ ['Scrabble'], ['Poker', 'correct'], ["Darts"], ['Rugby']]
     } ,
 
-    sixthQuestion = {
+     {
         question: "Who was the original transporter chief on the Enterprise-D?",
         answers: [ ['Guinan'], ['Jordy Laforge', ], ["Miles O'Brien", 'correct'], ['Leonard McCoy']]
     } ,
 
-    seventhQuestion = {
+     {
         question: "What ship did Picard command, prior to the Enterprise?",
         answers: [ ['The Excelsior'], ['The Reliant'], ['The Milennium Falcon'], ['The Stargazer', 'correct']]
     } ,
 
-    eigthQuestion = {
+     {
         question: "What killed all the people on Data's home Omicron Theta?",
         answers: [ ['Lore'], ['The Crystalline Entity', 'correct'], ["Noonian Singh"], ['Khan']]
     } ,
 
-    ninthQuestion = {
+     {
         question: "Where in space did  Locutus of borg battle against Starfleet?",
         answers: [ ['Wolf-359', 'correct'], ["Earth's orbit"], ["Talos-4"], ['Vulcan']]
     } ,
 
-    tenthQuestion = {
+     {
         question: "What was the name of the anti-Cardassian terrorist group?",
         answers: [ ['Starfleet Rebels'], ['The Maquis', 'correct'], ["Newfleet"], ['Anti-Card']]
     } ];
