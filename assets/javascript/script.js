@@ -39,7 +39,7 @@ let allQuestions = [
     } ,
 
     sixthQuestion = {
-        question: "Who was the transporter chief, for the first few years of the Enterprise-D's operation?",
+        question: "Who was the original transporter chief on the Enterprise-D?",
         answers: [ ['Guinan'], ['Jordy Laforge', ], ["Miles O'Brien", 'correct'], ['Leonard McCoy']]
     } ,
 
@@ -54,12 +54,12 @@ let allQuestions = [
     } ,
 
     ninthQuestion = {
-        question: "Where in space did the battle take place, between Locutus of borg and Starfleet?",
+        question: "Where in space did  Locutus of borg battle against Starfleet?",
         answers: [ ['Wolf-359', 'correct'], ["Earth's orbit"], ["Talos-4"], ['Vulcan']]
     } ,
 
     tenthQuestion = {
-        question: "What was the name of the terrorist group, who split off from the Federation, to fight against the Cardassians?",
+        question: "What was the name of the anti-Cardassian terrorist group?",
         answers: [ ['Starfleet Rebels'], ['The Maquis', 'correct'], ["Newfleet"], ['Anti-Card']]
     } ];
 
@@ -224,6 +224,7 @@ function finalScore() {
         quizQ.innerHTML = "Thanks for playing!"
         let quizI = `<button type="submit" id="rank" onclick="starfleetRank();">Is Starfleet the career for you?</button>`;
         quizN.innerHTML = quizI;
+        quizS.innerHTML = `<p>Your final score on the Star Trek Quiz is ${score} out of 10</p>`;
 }
 
 let finalImages = [
@@ -241,17 +242,17 @@ let finalImages = [
 ]
 
 let suggestedRank = [
-    `<p id="suggestion-p">Your score was 0 out of 10, yet you still seek a place in Starfleet? You posess unflinching determination, even in the face of inevitable failure. Akin to someone tending a garden, knowing full well the plants will eventually wither. Your would make a fine gardener, like Boothby, beloved groundskeeper of Starfleet academy.</p>` , 
-    `<p id="suggestion-p">Your score was 1 out of 10, you have made the first step towards serving in Starfleet. Everyone can make a difference, regardless of career aptitude. While Starfleet academy might be outside your scope, you could always enlist directly in Starfleet. Without pursuing the high end career like others in the academy, this gets you right in the action. You could rise to the rank of petty officer, start your journey for a more grounded path to the stars.</p>` , 
-    `<p id="suggestion-p">Your score was 2 out of 10, you are a long way from the captain's chair. But every great journey begins with a small step. If you are determined, then consider joining Starfleet academy. As a Cadet trainee, you will receive a robust education and an opportunity to explore many avenues of starship service, including command, operations and sciences.</p>` ,
-    `<p id="suggestion-p">Your score was 3 out of 10, you're not just the average Pakled. You have the aptitude of Starfleet Academy graduate, with the rank of Ensign. Your service aboard the ship has only just begun, but remember , the trial never ends</p>` , 
-    `<p id="suggestion-p">Your score was 4 out of 10, you might be the wisest Klingon of the house. You would be well suited to begin training in the officer's program and would be easily considered for the rank of Lieutenant. You've proven you can take command, how far are you willing to go? </p>` ,
-    `<p id="suggestion-p">Your score was 5 out of 10, you are as observant as any Betazoid. With your impressive knowledge of Starfleet activity, you could certainly rise to the rank of Lieutenant Commander. An impressive achievement for anyone, and a stonesthrow from ship XO position of commander. You've got the stuff, but how much stuff is the question</p>` , 
-    `<p id="suggestion-p">Your score was 6 out of 10, you are conniving as any Romulan. You have the drive to suceed and there's no reason you couldn't ascend to the impressive rank of Commander, 1st officer of the ship and XO, ranking just below the Captain.Your path starts here...but lets not pretend you don't covet the captain's chair</p>` ,
-    `<p id="suggestion-p">Your score was 7 out of 10, you are as wise as any Vulcan. You have the charisma, the focus and sheer force of will to ascend to the coveted rank of Captain. You are responsible for the lives of the hundreds of crew serving under you, while also shouldering the responsibility of leading by example while representing Starfleet. You are one in a million</p>` ,
-    `<p id="suggestion-p">Your score was 8 out of 10, you have the intellect of a genetically altered superman of the Eugenics wars. The Captain's chair is not enough for you and by the prophets will Starfleet recognise it. You are clearly fit to be an Admiral of Starfleet, in command of major sectors of Starfleet and acting as department head at Starfleet headquarters. Your decisions will affect the destiny of the galaxy</p>` , 
-    `<p id="suggestion-p">Your score was 9 out of 10, you have the intelligence, strength and energy of a positronic Android. Starfleet was too small for you, after all, managing the activity of thousands of Starships is small change, when you could influence the entire United Federation of Planets. You could be President of the Federation, signing new laws into effect, brokering peace with unknowable civilizations and stretching the fate of the cosmos like strings on a violin. You are one in a galaxy</p>` , 
-    `<p id="suggestion-p">Your score was 10 out of 10 - but you already knew that didn't you? You knew what the score would be before you started the quiz, you knew what the score would be before I even thought of making the quiz. You don't just know things... you KNOW. Omnipotence is a frightening concept to many, but to you its just another 11 letter word in your frighteningly diverse vocabulary. You are obviously a member of the Q continuom, an immortal being posessing omnipotence and omniscience, deigning to play with mortals such as us for your amusement. With a click of a button you could change reality... so whats stopping you?</p>`
+    `<p id="suggestion-p">Your score was 0 out of 10, yet you still seek a place in Starfleet? You posess unflinching determination, even in the face of inevitable failure. Akin to someone tending a garden, knowing full well the plants will eventually wither. Your would make a fine <bold>groundskeeper</bold>, like Boothby, beloved groundskeeper of Starfleet academy.</p>` , 
+    `<p id="suggestion-p">Your score was 1 out of 10, you have made the first step towards serving in Starfleet. Everyone can make a difference, regardless of career aptitude. While Starfleet academy might be outside your scope, you could serve as an <bold>Enlisted</bold> crewman. Without pursuing the high end career like others in the academy, this gets you right in the action. You could rise to the rank of petty officer, start your journey for a more grounded path to the stars.</p>` , 
+    `<p id="suggestion-p">Your score was 2 out of 10, you are a long way from the captain's chair. But every great journey begins with a small step. If you are determined, then consider joining Starfleet academy. As a <bold>Cadet</bold> trainee, you will receive a robust education and an opportunity to explore many avenues of starship service, including command, operations and sciences.</p>` ,
+    `<p id="suggestion-p">Your score was 3 out of 10, you're not just the average Pakled. You have the aptitude of Starfleet Academy graduate, with the rank of <bold>Ensign</bold>. Your service aboard the ship has only just begun, but remember , the trial never ends</p>` , 
+    `<p id="suggestion-p">Your score was 4 out of 10, you might be the wisest Klingon of the house. You would be well suited to begin training in the officer's program and would be easily considered for the rank of <bold>Lieutenant</bold>. You've proven you can take command, how far are you willing to go? </p>` ,
+    `<p id="suggestion-p">Your score was 5 out of 10, you are as observant as any Betazoid. With your impressive knowledge of Starfleet activity, you could certainly rise to the rank of <bold>Lieutenant Commander</bold>. An impressive achievement for anyone, and a stonesthrow from ship XO position of commander. You've got the stuff, but how much stuff is the question</p>` , 
+    `<p id="suggestion-p">Your score was 6 out of 10, you are conniving as any Romulan. You have the drive to suceed and there's no reason you couldn't ascend to the impressive rank of <bold>Commander</bold>, 1st officer of the ship and XO, ranking just below the Captain.Your path starts here...but lets not pretend you don't covet the captain's chair</p>` ,
+    `<p id="suggestion-p">Your score was 7 out of 10, you are as wise as any Vulcan. You have the charisma, the focus and sheer force of will to ascend to the coveted rank of <bold>Captain</bold>. You are responsible for the lives of the hundreds of crew serving under you, while also shouldering the responsibility of leading by example while representing Starfleet. You are one in a million</p>` ,
+    `<p id="suggestion-p">Your score was 8 out of 10, you have the intellect of a genetically altered superman of the Eugenics wars. The Captain's chair is not enough for you and by the prophets will Starfleet recognise it. You are clearly fit to be an <bold>Admiral</bold> of Starfleet, in command of major sectors of Starfleet and acting as department head at Starfleet headquarters. Your decisions will affect the destiny of the galaxy</p>` , 
+    `<p id="suggestion-p">Your score was 9 out of 10, you have the intelligence, strength and energy of a positronic Android. Starfleet was too small for you, after all, managing the activity of thousands of Starships is small change, when you could influence the entire United Federation of Planets. You could be <bold>President of the Federation</bold> , signing new laws into effect, brokering peace with unknowable civilizations and stretching the fate of the cosmos like strings on a violin. You are one in a galaxy</p>` , 
+    `<p id="suggestion-p">Your score was 10 out of 10 - but you already knew that didn't you? You knew what the score would be before you started the quiz, you knew what the score would be before I even thought of making the quiz. You don't just know things... you KNOW. Omnipotence is a frightening concept to many, but to you its just another 11 letter word in your frighteningly diverse vocabulary. You are obviously <bold>a Q, a godlike entity of of the Q continuum</bold> , an immortal being posessing omnipotence and omniscience, deigning to play with mortals such as us for your amusement. With a click of a button you could change reality... so whats stopping you?</p>`
 ]
 
 function starfleetRank () {
