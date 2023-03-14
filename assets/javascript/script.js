@@ -123,8 +123,9 @@ function runGame() {
         answerList.innerHTML = answerText;
         /*quizR.innerHTML = `<br></br>`;
         quizS.innerHTML =  `<br></br>`;*/
+        quizS.innerHTML = `<p>Your score is ${score}</p>`;
         let reset = document.getElementById('quiz-reset');
-        reset.innerHTML = `<a href="index.html"><button onclick="">Click here to reset the game</button></a>`;
+        reset.innerHTML = `<a href="index.html"><button id="reset-button">Reset quiz</button></a>`;
         
 }
 
@@ -137,16 +138,14 @@ function runGame() {
 function checkA() {
     quizQ.innerHTML = ``;
     quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
+    console.log((allQuestions[i].answers[0]));
     if(allQuestions[i].answers[0].includes('correct')) {
         answerList.innerHTML = `<p>That's the right answer!</p>`;
-        score ++; 
+        score ++;
     }else  {
         answerList.innerHTML = `<p>That's the wrong answer</p>`;
     };
-    console.log(score);
-    let quizS = document.getElementById('quiz-score');
-    let quizI = `<p>Your score is ${score}</p>`;
-    quizS.innerHTML = quizI;
+    quizS.innerHTML = `<p>Your score is ${score}</p>`;
     }
 
 function checkB() {
@@ -158,10 +157,7 @@ function checkB() {
     }else  {
         answerList.innerHTML = `<p>That's the wrong answer</p>`;
     };
-    console.log(score);
-    let quizS = document.getElementById('quiz-score');
-    let quizI = `<p>Your score is ${score}</p>`;
-    quizS.innerHTML = quizI;
+    quizS.innerHTML = `<p>Your score is ${score}</p>`;
     }
 
 function checkC() {
@@ -169,14 +165,11 @@ function checkC() {
     quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
     if(allQuestions[i].answers[2].includes('correct')) {
         answerList.innerHTML = `<p>That's the right answer!</p>`;
-        score ++;    
+        score ++;   
     } else  {
         answerList.innerHTML = `<p>That's the wrong answer</p>`;
     };
-    console.log(score);
-    let quizS = document.getElementById('quiz-score');
-    let quizI = `<p>Your score is ${score}</p>`;
-    quizS.innerHTML = quizI;
+    quizS.innerHTML = `<p>Your score is ${score}</p>`;
     }
 
 
@@ -189,9 +182,7 @@ function checkD() {
     }else  {
         answerList.innerHTML = `<p>That's the wrong answer</p>`;
     };
-    let quizS = document.getElementById('quiz-score');
-    let quizI = `<p>Your score is ${score}</p>`;
-    quizS.innerHTML = quizI;
+    quizS.innerHTML = `<p>Your score is ${score}</p>`;
     }
 
 // below 'nextQuestion()' function increments 'i' variable, changes question image and loops through to the next question

@@ -14,13 +14,18 @@
 <body>
     <div id="base">
         <header>
-            <a href="index.html"><h1>STAR TREK QUIZ</h1></a>
-            <h2 id="application-h">Starfleet Application</h2>
+            <div>
+                <i id="spock" class="fa-regular fa-hand-spock"></i>
+                <a href="index.html"><h1>STAR TREK QUIZ</h1></a>
+            </div>
+            <div>
+                <h2 id="application-h">Starfleet Application</h2>
+            </div>
         </header>
         <main>
             <form id="application-form">
             <fieldset >
-                <legend>Name and personal info</legend>
+                <legend><i class="fa-solid fa-person"></i>  Name and personal info  <i class="fa-solid fa-person"></i></legend>
                 <label for="name">
                     Please provide your name<input id="name" type="text" name="name" placeholder="John Smith" required />
                 </label>
@@ -38,7 +43,7 @@
             </fieldset>
 
             <fieldset >
-                <legend>Career and experience</legend>
+                <legend><i id="briefcase" class="fa-solid fa-briefcase">  </i>Career and experience  <i class="fa-solid fa-briefcase"></i></legend>
                 <label for="field">Please advise which dept you want to enter in Starfleet service
                     <select id="field" type="dropdown" name="field">
                         <option value="command">Command</option>
@@ -54,7 +59,7 @@
             </fieldset>
 
             <fieldset >
-                <legend>Medical information - Human </legend>
+                <legend><i class="fa-solid fa-house-medical"></i>  Medical information - Human <i class="fa-solid fa-house-medical"></i></legend>
                 <p class="form-p">If you are a member of the human species, please complete this part of the form. Non-human applicants, please skip this section and complete the below section</p>
                 <label for="sex">Male<input type="radio" id="sex" name="sex"
                         value="Male" />
@@ -80,7 +85,7 @@
             </fieldset>
 
             <fieldset >
-                <legend>Non-human applicant info</legend>
+                <legend><i class="fa-brands fa-reddit-alien"></i>  Non-human applicant info  <i class="fa-brands fa-reddit-alien"></i></legend>
                 <p class="form-p">If you are a member of any non-human species, please complete this section of the form</p>
                 <label for="species">Please indicate if you are a member of any of the following non-human species
                     <select id="species" type="dropdown" name="race">
@@ -118,14 +123,14 @@
             </fieldset>
 
             <fieldset >
-                <legend>Why do you wish to join Starfleet?</legend>
+                <legend><i class="fa-solid fa-user-astronaut"></i>  Why do you wish to join Starfleet?  <i class="fa-solid fa-user-astronaut"></i></legend>
                 <label for="essay">Please write a short paragraph, on why you wish to join Starfleet
                <textarea id="essay" name="essay" rows="10" cols="60"></textarea> 
             </label>
             </fieldset>
 
             <fieldset >
-                <legend>Final details</legend>
+                <legend><i class="fa-solid fa-list-check"></i>  Final details  <i class="fa-solid fa-list-check"></i></legend>
                 <label for="tc">Please indicate if you accept the terms and conditions <input
                     type="checkbox" id="tc" name="tc" value="tc" required /></label>
             <label class="checkbox">Please indicate if you wish to sign up to our newsletter <input
@@ -145,5 +150,6 @@
         </footer>
     
     <script src="assets/javascript/script.js"></script>
+    <script src="https://kit.fontawesome.com/61cb99950a.js" crossorigin="anonymous"></script>
 </body>
 </html>
