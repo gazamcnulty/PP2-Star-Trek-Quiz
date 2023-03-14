@@ -1,11 +1,11 @@
 #H1 Star Trek Quiz README
 
-<INSERT SCREENSHOT OF QUIZ>
+(INSERT SCREENSHOT OF QUIZ)
 
 The following read me file seeks to summarise the intent and implementation of the Star Trek Quiz page. It will describe user experience, features, visual design, technologies, validation + testing and acknowledgements
 
-<INSERT REPOSITORY LINK>
-<INSERT HTTPS LINK>
+(INSERT REPOSITORY LINK)
+(INSERT HTTPS LINK)
 
 Table of Contents
 ---------------------------------------------
@@ -21,7 +21,7 @@ Table of Contents
 ---INTRODUCTION AND SUMMARY 
 ---------------------------------------
 The Star Trek Quiz is a site that has a short quiz and application, it is for entertainment purposes for Star Trek fans. Its practical application would be ideal for a Star Trek fan community website, or a post on a fan page on social media like Facebook or Instagram. The site is targeted at fans of the television show Star Trek : The Next Generation. It contains a simple 10 question quiz based on the show. 
-<INSERT SCREENSHOT OF QUIZ>
+(INSERT SCREENSHOT OF QUIZ)
 
 Each question has 4 possible answers, a relevant image. If the correct answer is selected, the user score is increased by 1. If the wrong answer is selected, there is no change to the score. In either case, there is a button to proceed to the next question and also a reset button to begin the quiz again. After 10 questions have been answered, the page presents the final score and a celbratory image. 
 
@@ -79,21 +79,21 @@ The Starfleet application is for entertainment purposes similar to the quiz, it 
 I wanted to use simple non distracting visual design , that fit the visual style of the television show and also made the elements easily discernable to any user. Most ships in Star Trek are grey colored, in The Next Generation the usual color scheme is bit bland with muted 'hotel' style color tones. I decided to use a simple grey base for the quiz and use a high definition image of space for the background behind it.
 
 I used a pixel image checker (  https://imagecolorpicker.com/env  ) to compare colors from an image from the television show. This provided source colors for the grey background(from the ship) and the blue font (from the tv show title card).
-<INSERT SCREENSHOT OF PIXEL IMAGE CHECK>
+(INSERT SCREENSHOT OF PIXEL IMAGE CHECK)
 
 The main header of the page is a h1 element and has large em sizing, to denote its importance semantically to someone looking at the code and visually to a standard user. The font used was 'Omicron' along with some standard fonts as backup. This is a cool font which isn't too far off of something that would be used on Star Trek. It is stylised enough to be interesting to the user , it looks different from most fonts one would typically see. This makes it more engaging and more likely to draw someone in out of curiosity.
-<INSERT SCREENSHOT OF HEADER>
+(INSERT SCREENSHOT OF HEADER)
 
 I added some simple icons using fontawesome ( https://fontawesome.com/icons ) , a space/rocket ship next to the header and smaller relevant icons to the different sections of the application form (person for personal details, check list for Ts and Cs etc) This don't change the overall design a whole lot but it provides some additional non-verbal communication which is always good for user experience and general accessability.
-<INSERT SCREENSHOT OF ICON>
+(INSERT SCREENSHOT OF ICON)
 
 The background image is a hd spacewallpaper, it was uploaded onto reddit.com by user u/amodep1, on the subreddit r/ultrahdwallpapers . ( https://www.reddit.com/r/ultrahdwallpapers/comments/86hp1i/galaxy_nebula_blurring_stars_3840x2160/ ) I had originally used pexels, but I was unable to locate an image of space that was HD enough for my goal. I wanted the image to look good both on a standard monitor or a larger 4k monitor and I am satisfied with this background.
 
 The images have a uniform size, this is because I wanted to try to reduce elements moving or changing position between questions. This does still occur slightly , but the images remaining the same size helps reduce it signifcantly. Each image is a screenshot I took myself, using snipping tool from footage of episodes of Star Trek The Next Generation.
-<INSERT SCREENSHOT OF IMAGE>
+(INSERT SCREENSHOT OF IMAGE)
 
 The buttons have a uniform size and are large. This is to make it very obvious to the user that they are clickable buttons. I gave them a background color which matches the same color of the header, so keep the visual design consistent. I gave the text a white color as I feel this contrasts well with the blue color. The 4 answer buttons are on a horizontal line all next to each other , so its quite obvious they are related to one another.
-<INSERT SCREENSHOT OF QUESTION AREA>
+(INSERT SCREENSHOT OF QUESTION AREA)
 
 Above the answer buttons, I have some text which asks the trivia question. This is using font Exo2 , with more standard fonts as backup. Exo2 is another 'sci-fi' style font, but it is bit more readable than the more exotic Orbitron font used in the header. I wanted these to look normal enough compared to some of the other stylised elements, so the user can just focus on the content of the question rather than the visual design.
 
@@ -102,24 +102,24 @@ The question is always visible at the same time as the answer buttons, though on
 
 Under the answer buttons and next button, there is a line of text providing the user score. This counts how many correct answers the user got and displays them here. I thought about adding some more complex visual elements such as a progress bar or color to indicate how well or badly they are doing - but again I felt this went against the ethos of the page . Its just a fun quiz about star trek , the real intent is to generate interest and input from Star Trek fans, to cause them to share and discuss with their friends. I don't want people to feel bad or feel under pressure about how badly or well they are doing in the quiz.
 
-<INSERT SCREENSHOT OF SCORE>
+(INSERT SCREENSHOT OF SCORE)
 
 Under the grey 'base' there is a small almost hidden line of text 'Ex astris, scientia' As I mentioned above, this is the motto of Starfleet academy and its just a bit of extra lore for fans. I gave this a simple white color to contrast against its dark background image of space.
-<INSERT SCREENSHOT OF BOTTOM>
+(INSERT SCREENSHOT OF BOTTOM)
 
 At the end of the quiz the question line is replaced by a celebratory thank you, the button is replaced with a new button which asks 'Is Starfleet the career for you'? It has a similar appearance to the other buttons but the content is so different from what one may expect on a quiz , I am hoping users will be curious enough to click on it. This replaces the quiz with a paragraph of text , dependent on how well the user did. A link is then presented which leads to application.html
-<INSERT SCREENSHOT OF ENDGAME>
+(INSERT SCREENSHOT OF ENDGAME)
 
 The application form keeps the same visual scheme as the quiz, this keeps the visual design consistent. The main difference is that the majority of form text elements are in black instead of previously used blue. I felt this was more appropriate to lend a vibe of 'seriousness' to the form. After all it was a serious application form to starfleet, this is closer to how it would look. This is more engaging for fans and easier for legibility purposes also. 
-<INSERT SCREENSHOT OF FORM FONT>
+(INSERT SCREENSHOT OF FORM FONT)
 
 There are small font awesome icons included on the legend of each form section, just for further clarity on the meaning of each section.
-<INSERT SCREENSHOT OF ICON>
+(INSERT SCREENSHOT OF ICON)
 
  The final paragraph at the bottom does go back to using a blue color, this is because at this stage you are pretty much done with filling out the form and its just providing some lore and flavour text again. As its all about Star Trek and Starfleet I wanted to subconsciously bring the user back to the Star Trek mindset by using a similar color to what would have been used in the title card on The Next Generation tv show.
 
 The submit button at the very bottom is unstylised, I thought about making its appearance similar to the other buttons but here , the white background matches the input sections of the form so it is consistent for the application page.
-<INSERT SCREENSHOT OF FORM BOTTOM>
+(INSERT SCREENSHOT OF FORM BOTTOM)
 
 ---TECHNOLOGIES
 -------------------------------------------------
@@ -132,15 +132,15 @@ VALIDATION
 
 The W3C html Validator was used to validate and check for errors in the html code. Upon completion, it found no errors in index.html, application.html
 
-<INSERT SCREENSHOTS OF VALIDATORS>
+(INSERT SCREENSHOTS OF VALIDATORS)
 
 The W3C css Validator was used to validate and check for errors in the css code. Upon completion, it found no errors in style.css.
 
-<INSERT SCREENSHOTS OF VALIDATORS>
+(INSERT SCREENSHOTS OF VALIDATORS)
 
 CodeBeautify Javascript Validator was used to validate and check for errors in the javascript code. Upon completion, it found no errors in script.js
 
-<INSERT SCREENSHOTS OF VALIDATORS>
+(INSERT SCREENSHOTS OF VALIDATORS)
 
 
 ---ACKNOWLEDGEMENTS AND CREDITS
