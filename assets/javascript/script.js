@@ -54,12 +54,12 @@ let allQuestions = [
     } ,
 
     ninthQuestion = {
-        question: "When Picard was assimilated by the Borg, he unwittingly led the Borg in battle and wiped out hundred's of starships. Where in space did this battle take place?",
+        question: "Where in space did the battle take place, between Locutus of borg and Starfleet?",
         answers: [ ['Wolf-359', 'correct'], ["Earth's orbit"], ["Talos-4"], ['Vulcan']]
     } ,
 
     tenthQuestion = {
-        question: "What was the name of the terrorist group who split off from the Federation, to lead an underground campaign against the Cardassians?",
+        question: "What was the name of the terrorist group, who split off from the Federation, to fight against the Cardassians?",
         answers: [ ['Starfleet Rebels'], ['The Maquis', 'correct'], ["Newfleet"], ['Anti-Card']]
     } ];
 
