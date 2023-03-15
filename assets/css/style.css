@@ -1,6 +1,9 @@
 body {
     background-image: url("../images/nebula.jpg");
-    background-size:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
      
 }
 
@@ -368,6 +371,8 @@ input {
 
   @media only screen and (min-width: 1900px) {
 
+    
+
     #base {
         min-height: 1600px;
     }
@@ -392,7 +397,12 @@ input {
     }
 
     #question-area {
-        font-size: 2em;
+        font-size: 2.5em;
+    }
+
+
+    #quiz-score {
+        font-size: 2.5em;
     }
 
     #reset-button {
