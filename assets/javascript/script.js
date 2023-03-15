@@ -99,10 +99,10 @@ const quizS = document.getElementById('quiz-score');
 const answerList = document.getElementById('answer-list');
 
 const answerText = `
-        <button onclick="checkA();">${allQuestions[i].answers[0][0]}</button>
-        <button onclick="checkB();">${allQuestions[i].answers[1][0]}</button>
-        <button onclick="checkC();">${allQuestions[i].answers[2][0]}</button>
-        <button onclick="checkD();">${allQuestions[i].answers[3][0]}</button>
+        <button onclick="checkAnswer(allQuestions[i].answers[0])">${allQuestions[i].answers[0][0]}</button>
+        <button onclick="checkAnswer(allQuestions[i].answers[1])">${allQuestions[i].answers[1][0]}</button>
+        <button onclick="checkAnswer(allQuestions[i].answers[2])">${allQuestions[i].answers[2][0]}</button>
+        <button onclick="checkAnswer(allQuestions[i].answers[3])">${allQuestions[i].answers[3][0]}</button>
         `;
 
 //below function ' runGame()' runs after clicking the start game button
@@ -131,56 +131,18 @@ function runGame() {
         
 }
 
-//below are 4 functions using if/else statements to check the answer validity, of the respective button clicked
-//the 4 functions are similar, the only difference being which option they check
-//1st function checks if the first index of the answers array in firstQuestion object
-//if that index contains true it confirms it was correct, increments score and runs 'nextQuesiton()' function
+//below function using if/else statements to check the answer validity, of the respective button clicked
+//each of the 4 buttons checks a different index, of allQuestions[i].answers 
+// checks if the selected index contains the word 'correct'
+//if it does contain the word 'correct', it increments score and runs 'nextQuesiton()' function
 //if was incorrect, it confirms it was incorrect, it does not increment score and runs 'nextQuestion()' function
 
-function checkA() {
+function checkAnswer(selectedIndex) {
     quizQ.innerHTML = ``;
     quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-    console.log((allQuestions[i].answers[0]));
-    if(allQuestions[i].answers[0].includes('correct')) {
+    if((selectedIndex).includes('correct')) {
         answerList.innerHTML = `<p>That's the right answer!</p>`;
         score ++;
-    }else  {
-        answerList.innerHTML = `<p>That's the wrong answer</p>`;
-    };
-    quizS.innerHTML = `<p>Your score is ${score}</p>`;
-    }
-
-function checkB() {
-    quizQ.innerHTML = ``;
-    quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-    if(allQuestions[i].answers[1].includes('correct')) {
-        answerList.innerHTML = `<p>That's the right answer!</p>`;
-        score ++;  
-    }else  {
-        answerList.innerHTML = `<p>That's the wrong answer</p>`;
-    };
-    quizS.innerHTML = `<p>Your score is ${score}</p>`;
-    }
-
-function checkC() {
-    quizQ.innerHTML = ``;
-    quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-    if(allQuestions[i].answers[2].includes('correct')) {
-        answerList.innerHTML = `<p>That's the right answer!</p>`;
-        score ++;   
-    } else  {
-        answerList.innerHTML = `<p>That's the wrong answer</p>`;
-    };
-    quizS.innerHTML = `<p>Your score is ${score}</p>`;
-    }
-
-
-function checkD() {
-    quizQ.innerHTML = ``;
-    quizN.innerHTML = `<button onclick='nextQuestion();'>Next</button>`;
-    if(allQuestions[i].answers[3].includes('correct')) {
-        answerList.innerHTML = `<p>That's the right answer!</p>`;
-        score ++; 
     }else  {
         answerList.innerHTML = `<p>That's the wrong answer</p>`;
     };
@@ -213,10 +175,10 @@ function nextQuestion() {
     };
     quizQ.innerHTML = `<br>${allQuestions[i].question}`;
         answerList.innerHTML = `
-        <button onclick="checkA();">${allQuestions[i].answers[0][0]}</button>
-        <button onclick="checkB();">${allQuestions[i].answers[1][0]}</button>
-        <button onclick="checkC();">${allQuestions[i].answers[2][0]}</button>
-        <button onclick="checkD();">${allQuestions[i].answers[3][0]}</button>
+        <button onclick="checkAnswer(allQuestions[i].answers[0])">${allQuestions[i].answers[0][0]}</button>
+        <button onclick="checkAnswer(allQuestions[i].answers[1])">${allQuestions[i].answers[1][0]}</button>
+        <button onclick="checkAnswer(allQuestions[i].answers[2])">${allQuestions[i].answers[2][0]}</button>
+        <button onclick="checkAnswer(allQuestions[i].answers[3])">${allQuestions[i].answers[3][0]}</button>
         `;
     
 }
