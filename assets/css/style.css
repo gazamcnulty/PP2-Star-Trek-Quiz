@@ -8,7 +8,7 @@ body {
 #base {
     background-color: rgb(170, 176, 180);
     width:75%;
-    min-height: 750px;
+    min-height: 950px;
     margin: 0 auto;
     text-align: center;
     border-radius: 5%;
@@ -50,6 +50,10 @@ p {
     margin:0 auto;
     padding: 10px;
     max-width: 75%;
+}
+
+#quiz-area {
+    margin:0 auto;
 }
 
 a {
@@ -115,14 +119,10 @@ button {
     left: 710px;*/
 }
 
-#reset-container {
-    position: relative;
-    height: 100px;
-    margin-bottom: 0;
-}
 
 #quiz-reset {
     position: absolute;
+    top: 850px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -135,7 +135,7 @@ button {
 
 #suggestion-p {
     font-size: 1em;
-    width:75%;
+    width:100%;
 }
 
 
@@ -183,3 +183,102 @@ input {
     margin: 20px;
 }
 
+@media screen and (max-width: 1000px) {
+
+    h1 {
+        font-size: 3em;
+    }
+
+    img {
+        height: 225px;
+        width: 325px;
+        border-radius: 2%;
+      }
+}
+
+@media screen and (max-width: 700px) {
+
+    .fa-rocket {
+        font-size: 150%;
+        display: none;
+    }
+
+    #base {
+        width: 85%;
+        min-height: 700px;
+        max-height: fit-content;
+        border-radius: 1%;
+    }
+
+    img {
+      height: 175px;
+      width: 250px;
+      border-radius: 2%;
+    }
+
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    button {
+        width: 80px;
+        height: 50px;
+        font-size: 0.8em;
+        margin: 5px;
+    }
+
+    #reset-button {
+        height: 40px;
+    }
+
+    #quiz-reset {
+        position: absolute;
+        top: 650px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 5px;
+    }
+
+    #suggestion-p {
+        font-size: 1em;
+        margin: 0 auto;
+        width:100%;
+    }
+
+    #application-link {
+       font-size: 1em;
+    }
+
+    #application-h {
+        font-size: 1.5em;
+    }
+
+    textarea {
+        height: 120px;
+        width: 200px;
+    }
+
+    label {
+        width:fit-content;
+        padding-bottom: 20px;
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .form-p {
+        font-size: 1em;
+    }
+
+    .sex-p {
+        font-size: 1em;
+    }
+
+    #signoff {
+        font-size: 1em;
+    }
+  }
