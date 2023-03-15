@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 let allQuestions = [ 
      {
     question: "What is the name of Data's cat?",
-    answers: [ ['Fluffy'], ['Spot', 'correct'], ["Lt Commander Whiskers"], ['William']]
+    answers: [ ['Fluffy'], ['Spot', 'correct'], ["Ensign Whiskers"], ['William']]
     } ,
      {
         question: "What is Picard's favourite beverage?",
@@ -47,12 +47,12 @@ let allQuestions = [
 
      {
         question: "What ship did Picard command, prior to the Enterprise?",
-        answers: [ ['The Excelsior'], ['The Reliant'], ['The Milennium Falcon'], ['The Stargazer', 'correct']]
+        answers: [ ['The Excelsior'], ['The Reliant'], ['Milennium Falcon'], ['The Stargazer', 'correct']]
     } ,
 
      {
         question: "What killed all the people on Data's home Omicron Theta?",
-        answers: [ ['Lore'], ['The Crystalline Entity', 'correct'], ["Noonian Singh"], ['Khan']]
+        answers: [ ['Lore'], ['Crystalline Entity', 'correct'], ["Noonian Singh"], ['Khan']]
     } ,
 
      {
@@ -259,6 +259,7 @@ let suggestedRank = [
 
 function starfleetRank () {
     quizI.innerHTML = `${finalImages[score]}`;
+    quizA.remove();
     quizS.remove();
     quizR.innerHTML = `${suggestedRank[score]}`;
         quizN.innerHTML = `<a id ="application-link" href="application.html">Click here to apply to Starfleet!</a>`;
