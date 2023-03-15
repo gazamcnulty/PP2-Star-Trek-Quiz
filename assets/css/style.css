@@ -1,8 +1,7 @@
 body {
     background-image: url("../images/nebula.jpg");
-    background-size: cover;
-    
-    
+    background-size:auto;
+     
 }
 
 #base {
@@ -196,7 +195,7 @@ input {
 @media screen and (max-width: 1000px) {
 
     #base {
-        width: 85%;
+        width: 70%;
         max-height: fit-content;
         border-radius: 1%;
     }
@@ -219,7 +218,25 @@ input {
         width: 325px;
         border-radius: 2%;
       }
+
+      label {
+        width:95%;
+        padding: 15px 0 15px 0;
+        font-size: 1em;
+        
+    }
+
+    p, legend {
+        font-size: 1em;
+        padding: 20px;
+    }
+      
 }
+
+
+
+
+
 
 @media screen and (max-width: 700px) {
 
@@ -254,7 +271,7 @@ input {
     }
 
     #quiz-reset {
-        top: 650px;
+        top: 900px;
     }
 
     #suggestion-p {
@@ -272,15 +289,11 @@ input {
     }
 
     textarea {
-        height: 120px;
-        width: 200px;
+        height: 100px;
+        width: 170px;
     }
 
-    label {
-        width:fit-content;
-        padding-bottom: 20px;
-        font-size: 1em;
-    }
+    
 
     p {
         font-size: 1em;
@@ -288,16 +301,70 @@ input {
 
     .form-p {
         font-size: 1em;
+        padding: 5px;
     }
 
     .sex-p {
         font-size: 1em;
     }
 
+    #end {
+        padding: 0;
+    }
+
     #signoff {
-        font-size: 1em;
+        font-size: 0.8em;
+        padding: 0;
     }
   }
+
+
+
+
+
+
+
+  @media screen and (max-width: 350px) {
+    img {
+    height: 140px;
+    width: 200px;
+    border-radius: 2%;
+    }
+
+    #suggestion-p {
+        font-size: 0.8em;
+        padding: 10px 0 10px 0;
+    }
+
+   
+    #quiz-reset {
+        top: 685px;
+    }
+
+    #base {
+
+        width: 90%;
+        min-height: 750px;
+    
+    }
+
+    p, label, legend {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+
+    fieldset {
+        border: none;
+    }
+
+    
+
+  }
+
+
+
+
+
 
   @media only screen and (min-width: 1900px) {
 
@@ -370,6 +437,10 @@ input {
     #signoff {
         font-size: 1.75em;
     }
+
+    #suggestion-p {
+        font-size: 2.5em;
+    }
 }
 
   @media only screen and (min-width: 3800px) {
@@ -431,6 +502,10 @@ input {
 
     #motto {
         font-size: 4em;
+    }
+
+    #suggestion-p {
+        font-size: 3em;
     }
 
     p, label, legend {

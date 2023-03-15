@@ -258,10 +258,9 @@ let suggestedRank = [
 ]
 
 function starfleetRank () {
-    let quizI = document.getElementById('quiz-image');
     quizI.innerHTML = `${finalImages[score]}`;
     quizS.remove();
-        quizQ.innerHTML = `${suggestedRank[score]}`;
+    quizR.innerHTML = `${suggestedRank[score]}`;
         quizN.innerHTML = `<a id ="application-link" href="application.html">Click here to apply to Starfleet!</a>`;
 };
 
