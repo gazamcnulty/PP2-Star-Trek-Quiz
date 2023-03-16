@@ -1,11 +1,16 @@
 /*jshint -W033 */
 
-/*first step is to assign a variable to locate the div 'welcome-area', which will then be called in function*/
+/*
+first step is to assign a variable to locate the div 'welcome-area',
+ which will then be called in function
+ */
 const welcomeA = document.getElementById('welcome-area');
 
-//on pageload, below function runs and shows welcome section
-document.addEventListener("DOMContentLoaded",function() {
 
+/**
+ * on pageload, below function runs and shows places content into welcome-area div
+ */ 
+document.addEventListener("DOMContentLoaded",function() {
     welcomeA.innerHTML = `
     <img src="assets/images/enterprise-front.JPG" alt="a starship in space" id="image">
     <p id="welcome">Click the button to start the game!</p>
@@ -13,7 +18,9 @@ document.addEventListener("DOMContentLoaded",function() {
             `;
 })
 
-/*below are a series of objects for the questions and answers, each assigned to a variable. the object contains keys of questions and answers , the answers key is an array , with each option as an index in the array*/
+/*
+below are a series of objects for the questions and answers, each assigned to a variable. the object contains keys of questions and answers , the answers key is an array , with each option as an index in the array
+*/
 
 let allQuestions = [{
         question: "What is the name of Data's cat?",
@@ -108,9 +115,12 @@ let allQuestions = [{
     }
 ];
 
-/*here I have placed the 10 questions variables into an array, so that they can be targetted via array indexing*/
-/*let allQuestions = [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eigthQuestion, ninthQuestion, tenthQuestion ];*/
-/*same as with the Qs and As, I have assigned images to variables, but I have used template literals for html coding. these variables can be called on by targetting the variable name with .innerHTML when manipulating the DOM*/
+/** 
+* here I have placed the 10 questions variables into an array, so that they can be targetted via array indexing
+* same as with the Qs and As, I have assigned images to variables, but I have used template literals for html 
+* coding. these variables can be called on by targetting the variable name with .innerHTML when manipulating the 
+* DOM
+*/
 let allImages = [`<img src="assets/images/data-spot.JPG" alt="Data with his cat" id="image">`,
     `<img src="assets/images/picard-beverage.JPG" alt="Picard with a drink" id="image">`,
     `<img src="assets/images/worf-batleth.JPG" alt="Worf holding a Klingon sword" id="image">`,
@@ -124,13 +134,16 @@ let allImages = [`<img src="assets/images/data-spot.JPG" alt="Data with his cat"
     `<img src="assets/images/thanks.JPG" alt="Picard holding a beer" id="image">`
 ];
 
-/*image variables in an array so they can be targetted*/
+//image variables in an array so they can be targetted
 
-/*'score' and 'i' will be incremented as the game progresses. 'i' is used to target the next question/answer on each round*/
+/*
+'score' and 'i' will be incremented as the game progresses. 
+'i' is used to target the next question/answer on each round
+*/
 let score = 0;
 let i = 0;
 
-/*these variables are used to target specific divs in html*/
+//these variables are used to target specific divs in html
 const quizI = document.getElementById('quiz-image');
 const quizQ = document.getElementById('question-area');
 const quizR = document.getElementById('quiz-result');
@@ -145,19 +158,21 @@ const answerText = `
         <button onclick="checkAnswer(allQuestions[i].answers[3])">${allQuestions[i].answers[3][0]}</button>
         `;
 
-//below function ' runGame()' runs after clicking the start game button
-// targets the welcome area and removes it 
-// targets the quiz-image div and assigns it a variable, then replaces its html with the first image from images array
-// targets the first question from questions array, assigns it to variable
-// creates a h3 element with id of 'quiz-line'
-// targets quiz-area div and assigns it to a variable
-// targets the h3 and makes its innerhtml the first question from questions array
-// targets the quiz-area variable, makes the h3 question a child of quiz-area
-
-//creates a div assigns it to answerList variable, gives it an id of 'quiz-list'
-//creates a variable with inner html with creates 4 answer buttons
-//buttons have onclick to target checkAnswer functions, they target the answer by array indexing
-//puts buttons html into the answerList variable, this is then made a child of the quiz-area div
+/**
+* Below function ' runGame()' runs after clicking the start game button 
+* targets the welcome area and removes it.
+* targets the quiz-image div and assigns it a variable, then replaces its html with the first 
+* image from images array
+* targets the first question from questions array, assigns it to variable
+* creates a h3 element with id of 'quiz-line'
+* targets quiz-area div and assigns it to a variable
+* targets the h3 and makes its innerhtml the first question from questions array
+* targets the quiz-area variable, makes the h3 question a child of quiz-area
+* creates a div assigns it to answerList variable, gives it an id of 'quiz-list'
+* creates a variable with inner html with creates 4 answer buttons
+* buttons have onclick to target checkAnswer functions, they target the answer by array indexing
+* puts buttons html into the answerList variable, this is then made a child of the quiz-area div
+ */
 function runGame() {
     welcomeA.remove();
     quizI.innerHTML = `${allImages[i]}`;
@@ -169,11 +184,14 @@ function runGame() {
 
 }
 
-//below function using if/else statements to check the answer validity, of the respective button clicked
-//each of the 4 buttons checks a different index, of allQuestions[i].answers 
-// checks if the selected index contains the word 'correct'
-//if it does contain the word 'correct', it increments score and runs 'nextQuesiton()' function
-//if was incorrect, it confirms it was incorrect, it does not increment score and runs 'nextQuestion()' function
+/** 
+* Below function using if/else statements to check the answer validity, 
+* of the respective button clicked each of the 4 buttons checks a different index, 
+* of allQuestions[i].answers .
+* It checks if the selected index contains the word 'correct'.
+* If it does contain the word 'correct', it increments score and runs 'nextQuesiton()' function.
+* If was incorrect, it confirms it was incorrect, it does not increment score and runs 'nextQuestion()' function
+*/
 
 function checkAnswer(selectedIndex) {
     quizQ.innerHTML = ``;
@@ -187,27 +205,28 @@ function checkAnswer(selectedIndex) {
     quizS.innerHTML = `<p>Your score is ${score}</p>`;
 }
 
-// below 'nextQuestion()' function increments 'i' variable, changes question image and loops through to the next question
-// first increases i so the targetted questions, answers and images will be the next index in their respective arrays
-// uses the higher i value, to target the next image and make it the innerHTML of quiz-image variable
-// each image is relevant to the question, final image is thank you message
-
-// if/else statement to check if the game has ended (i has reached value of 10)
-// if i >= 10 it targets quiz-line div and replaces innerHTML with thank you message and removes the answer list from view
-// increments score to show final score
-
-//if i is less than 10, it goes to the next question, using similar code as runGame();
-//targets elements, assigns to variables, uses object/array indexing to target the next question and set of answers
+/**
+* Below 'nextQuestion()' function increments 'i' variable, changes question image and
+* loops through to the next question.
+* First increases i so the targetted questions, answers and images will be 
+* the next index in their respective arrays.
+* It uses the higher i value, to target the next image and make it the innerHTML of quiz-image variable.
+* Each image is relevant to the question, final image is thank you message.
+* if/else statement to check if the game has ended (i has reached value of 10)
+* if i >= 10 it targets quiz-line div and replaces innerHTML with thank you message 
+* and removes the answer list from view
+* increments score to show final score
+* if i is less than 10, it goes to the next question, using similar code as runGame();
+* targets elements, assigns to variables, uses object/array indexing to target 
+* the next question and set of answers 
+*/
 
 function nextQuestion() {
     quizR.innerHTML = ``;
     quizN.innerHTML = ``;
-
     i++;
-
     let quizI = document.getElementById('quiz-image');
     quizI.innerHTML = `${allImages[i]}`;
-
     if (i >= 10) {
         finalScore();
     }
@@ -218,9 +237,14 @@ function nextQuestion() {
         <button onclick="checkAnswer(allQuestions[i].answers[2])">${allQuestions[i].answers[2][0]}</button>
         <button onclick="checkAnswer(allQuestions[i].answers[3])">${allQuestions[i].answers[3][0]}</button>
         `;
-
 }
 
+/**
+ * finalScore() function is triggered at i<=10, at which point it thanks user for playing , 
+ * changes to celbratory image and creates new button asking 'Is Starfleet the career for you?'
+ * It also changes score text to say final score . 
+ * If the button is pressed it triggers starfleetRank() function
+ */
 function finalScore() {
     answerList.remove();
     quizQ.innerHTML = "Thanks for playing!"
@@ -229,6 +253,7 @@ function finalScore() {
     quizS.innerHTML = `<p>Your final score on the Star Trek Quiz is ${score} out of 10</p>`;
 }
 
+//array of endgame images, called in starfleetRank() function
 let finalImages = [
     `<img src="assets/images/boothby.JPG" alt="a groundskeeper at Starfleet academy" >`,
     `<img src="assets/images/enlisted.JPG" alt="an enlisted crewman" >`,
@@ -243,6 +268,7 @@ let finalImages = [
     `<img src="assets/images/q.JPG" alt="Q , the omnipotent immortal prankster from the Q continuum" >`
 ]
 
+//array of endgame paragraphs, called in starfleetRank() function
 let suggestedRank = [
     `<p id="suggestion-p">Your score was 0 out of 10, yet you still seek a place in Starfleet? You posess unflinching determination, even in the face of inevitable failure. Akin to someone tending a garden, knowing full well the plants will eventually wither. Your would make a fine <bold>groundskeeper</bold>, like Boothby, beloved groundskeeper of Starfleet academy.</p>`,
     `<p id="suggestion-p">Your score was 1 out of 10, you have made the first step towards serving in Starfleet. Everyone can make a difference, regardless of career aptitude. While Starfleet academy might be outside your scope, you could serve as an <bold>Enlisted</bold> crewman. Without pursuing the high end career like others in the academy, this gets you right in the action. You could rise to the rank of petty officer, start your journey for a more grounded path to the stars.</p>`,
@@ -257,6 +283,13 @@ let suggestedRank = [
     `<p id="suggestion-p">Your score was 10 out of 10 - but you already knew that didn't you? You knew what the score would be before you started the quiz, you knew what the score would be before I even thought of making the quiz. You don't just know things... you KNOW. Omnipotence is a frightening concept to many, but to you its just another 11 letter word in your frighteningly diverse vocabulary. You are obviously <bold>a Q, a godlike entity of of the Q continuum</bold> , an immortal being posessing omnipotence and omniscience, deigning to play with mortals such as us for your amusement. With a click of a button you could change reality... so whats stopping you?</p>`
 ]
 
+/** 
+ * this is the final function of the quiz, it works in a similar way to the previous functions 
+ * but draws images and sources from finalImages array and suggestedRank array, 
+ * using indexing and score value . 
+ * Finally it creates an anchor element which inviting user to apply to starfleet.
+ *  This link takes the user away from index.html and onto application.html
+ */
 function starfleetRank() {
     quizI.innerHTML = `${finalImages[score]}`;
     quizS.remove();
