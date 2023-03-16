@@ -1,5 +1,3 @@
-/*jshint -W033 */
-
 /*
 first step is to assign a variable to locate the div 'welcome-area',
  which will then be called in function
@@ -12,7 +10,7 @@ const welcomeA = document.getElementById('welcome-area');
  */ 
 document.addEventListener("DOMContentLoaded",function() {
     welcomeA.innerHTML = `
-    <img src="assets/images/enterprise-front.JPG" alt="a starship in space" id="image">
+    <img src="assets/images/enterprise-front.JPG" alt="a starship in space">
     <p id="welcome">Click the button to start the game!</p>
     <button type="submit" id="start" onclick="runGame();">Start Game</button>
             `;
@@ -121,17 +119,17 @@ let allQuestions = [{
 * coding. these variables can be called on by targetting the variable name with .innerHTML when manipulating the 
 * DOM
 */
-let allImages = [`<img src="assets/images/data-spot.JPG" alt="Data with his cat" id="image">`,
-    `<img src="assets/images/picard-beverage.JPG" alt="Picard with a drink" id="image">`,
-    `<img src="assets/images/worf-batleth.JPG" alt="Worf holding a Klingon sword" id="image">`,
-    `<img src="assets/images/ships.JPG" alt="Romulan and Klingon ships" id="image">`,
-    `<img src="assets/images/game.JPG" alt="Data playing a game" id="image">`,
-    `<img src="assets/images/transporter.JPG" alt="A person who has beamed in on a transporter" id="image">`,
-    `<img src="assets/images/stargazer.JPG" alt="An old starship" id="image">`,
-    `<img src="assets/images/omicron-theta.JPG" alt="Data's home planet" id="image">`,
-    `<img src="assets/images/Locutus.JPG" alt="Picard post-assimilation" id="image">`,
-    `<img src="assets/images/Ro.JPG" alt="Ro Laren holding a phaser" id="image">`,
-    `<img src="assets/images/thanks.JPG" alt="Picard holding a beer" id="image">`
+let allImages = [`<img src="assets/images/data-spot.JPG" alt="Data with his cat">`,
+    `<img src="assets/images/picard-beverage.JPG" alt="Picard with a drink">`,
+    `<img src="assets/images/worf-batleth.JPG" alt="Worf holding a Klingon sword">`,
+    `<img src="assets/images/ships.JPG" alt="Romulan and Klingon ships">`,
+    `<img src="assets/images/game.JPG" alt="Data playing a game">`,
+    `<img src="assets/images/transporter.JPG" alt="A person who has beamed in on a transporter">`,
+    `<img src="assets/images/stargazer.JPG" alt="An old starship">`,
+    `<img src="assets/images/omicron-theta.JPG" alt="Data's home planet">`,
+    `<img src="assets/images/Locutus.JPG" alt="Picard post-assimilation">`,
+    `<img src="assets/images/Ro.JPG" alt="Ro Laren holding a phaser">`,
+    `<img src="assets/images/thanks.JPG" alt="Picard holding a beer">`
 ];
 
 //image variables in an array so they can be targetted

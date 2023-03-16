@@ -91,11 +91,7 @@ a {
     color:honeydew;
     text-align: center;
 }
-legend {
-    font-weight: bold;
-    font-size: 20px;
-    padding: 20px;
-}
+
 button {
     width: 150px;
     height: 60px;
@@ -109,6 +105,8 @@ button {
     width: 100px;
     height: 60px;
 }
+/*reset button given absolute positioning, because the changing buttons + layout causes elements to jump and move around,
+this way the button stays in the same place. position dicated by bottom attribute, it is changed in other media queries*/
 #quiz-reset {
     position: absolute;
     top: 675px;
@@ -124,10 +122,12 @@ button {
     font-size: 1.2em;
     width:100%;
 }
+/*ensuring the form sections/borders are centered and spaced out between each other*/
 fieldset {
     margin: 0 auto;
     padding:20px;
 }
+/*giving similar font to the label elements in form*/
 label {
     display: block;
     margin: 0 auto;
@@ -136,7 +136,11 @@ label {
     font-family: 'Exo 2', Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
 }
+/*giving similar font to the legend elements in form*/
 legend {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
     font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
 }
 #sex-p {
@@ -154,6 +158,7 @@ legend {
     padding: 20px;
     margin: 20px;
 }
+/*label for slightly smaller than average screen like horizontal tablet*/
 @media screen and (max-width: 1050px) {
     #base {
         width: 80%;
@@ -193,6 +198,7 @@ legend {
         padding: 20px;
    }
 }
+/*screen for very small tablet/kindle or horizontal phone*/
 @media screen and (max-width: 750px) {
     .fa-rocket {
         font-size: 150%;
@@ -256,7 +262,7 @@ legend {
    }
 }
 
-
+/*small screens such as smart phone*/
 @media screen and (max-width: 450px) {
     img {
         height: 140px;
@@ -296,8 +302,7 @@ legend {
    }
 }
 
-
-
+/*screen size for larger than average monitor*/
 @media only screen and (min-width: 1900px) {
     #base {
         min-height: 1600px;
@@ -381,7 +386,7 @@ legend {
 }
 
 
-
+/*screen size for very large 4k monitor / tv*/
 @media only screen and (min-width: 3800px) {
     h1 {
         font-size: 8em;
