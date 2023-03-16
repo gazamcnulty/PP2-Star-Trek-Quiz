@@ -275,6 +275,9 @@ Languages: -HTML5 -CSS -javascript
 - Google Fonts was used to import fonts 'Orbitron', 'Exo2', 
 - Font Awesome was used to import icons
 - Balsamiq was used to generate wireframes
+- favicon.io was used for the favicon
+
+Favicon.io
 
 ## Creation and Deployment
 
