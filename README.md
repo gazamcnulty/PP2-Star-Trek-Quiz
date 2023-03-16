@@ -309,7 +309,7 @@ The W3C css Validator was used to validate and check for errors in the css code.
 
 ![Image](assets/documents/validation/css-no-errors.JPG)
 
-- <a href="/https://https://github.com/gazamcnulty/quiz-practice/blob/main/assets/documents/readme-screens/css-validator.pdf" target="_blank">CSS Validator Screen</a>
+- <a href="https://https://github.com/gazamcnulty/quiz-practice/blob/main/assets/documents/readme-screens/css-validator.pdf" target="_blank">CSS Validator Screen</a>
 
 
 CodeBeautify Javascript Validator + jshint.com were used to validate and check for errors in the javascript code. Upon completion, they both warned of an issue with 4 named variables, being unused.
