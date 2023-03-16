@@ -1,20 +1,19 @@
 /*jshint -W033 */
 
-
+/*first step is to assign a variable to locate the div 'welcome-area', which will then be called in function*/
+const welcomeA = document.getElementById('welcome-area');
 
 //on pageload, below function runs and shows welcome section
 document.addEventListener("DOMContentLoaded",function() {
 
-    let welcomeA = document.getElementById('welcome-area');
     welcomeA.innerHTML = `
     <img src="assets/images/enterprise-front.JPG" alt="a starship in space" id="image">
     <p id="welcome">Click the button to start the game!</p>
-            <button type="submit" id="start" onclick="runGame();">Start Game</button>
+    <button type="submit" id="start" onclick="runGame();">Start Game</button>
             `;
 })
 
 /*below are a series of objects for the questions and answers, each assigned to a variable. the object contains keys of questions and answers , the answers key is an array , with each option as an index in the array*/
-
 
 let allQuestions = [{
         question: "What is the name of Data's cat?",
@@ -34,7 +33,6 @@ let allQuestions = [{
             ['Espresso']
         ]
     },
-
     {
         question: "What is the name of the Klingon sword?",
         answers: [
@@ -44,7 +42,6 @@ let allQuestions = [{
             ["Bird of prey"]
         ]
     },
-
     {
         question: "What starship technology is used by Klingons and Romulans, but not by Starfleet?",
         answers: [
@@ -54,7 +51,6 @@ let allQuestions = [{
             ['Time travel']
         ]
     },
-
     {
         question: "What game did the bridge officers of the Enterprise-D play on a regular basis?",
         answers: [
@@ -64,7 +60,6 @@ let allQuestions = [{
             ['Rugby']
         ]
     },
-
     {
         question: "Who was the original transporter chief on the Enterprise-D?",
         answers: [
@@ -84,7 +79,6 @@ let allQuestions = [{
             ['The Stargazer', 'correct']
         ]
     },
-
     {
         question: "What killed all the people on Data's home Omicron Theta?",
         answers: [
@@ -94,7 +88,6 @@ let allQuestions = [{
             ['Khan']
         ]
     },
-
     {
         question: "Where in space did  Locutus of borg battle against Starfleet?",
         answers: [
@@ -104,7 +97,6 @@ let allQuestions = [{
             ['Vulcan']
         ]
     },
-
     {
         question: "What was the name of the anti-Cardassian terrorist group?",
         answers: [
@@ -118,7 +110,6 @@ let allQuestions = [{
 
 /*here I have placed the 10 questions variables into an array, so that they can be targetted via array indexing*/
 /*let allQuestions = [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eigthQuestion, ninthQuestion, tenthQuestion ];*/
-
 /*same as with the Qs and As, I have assigned images to variables, but I have used template literals for html coding. these variables can be called on by targetting the variable name with .innerHTML when manipulating the DOM*/
 let allImages = [`<img src="assets/images/data-spot.JPG" alt="Data with his cat" id="image">`,
     `<img src="assets/images/picard-beverage.JPG" alt="Picard with a drink" id="image">`,
@@ -134,15 +125,13 @@ let allImages = [`<img src="assets/images/data-spot.JPG" alt="Data with his cat"
 ];
 
 /*image variables in an array so they can be targetted*/
-/*let allImages = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11];/*
 
 /*'score' and 'i' will be incremented as the game progresses. 'i' is used to target the next question/answer on each round*/
 let score = 0;
 let i = 0;
 
-const welcomeA = document.getElementById('welcome-area');
+/*these variables are used to target specific divs in html*/
 const quizI = document.getElementById('quiz-image');
-const quizA = document.getElementById('quiz-area');
 const quizQ = document.getElementById('question-area');
 const quizR = document.getElementById('quiz-result');
 const quizN = document.getElementById('quiz-next');
@@ -174,8 +163,6 @@ function runGame() {
     quizI.innerHTML = `${allImages[i]}`;
     quizQ.innerHTML = `<br>${allQuestions[i].question}`;
     answerList.innerHTML = answerText;
-    /*quizR.innerHTML = `<br></br>`;
-    quizS.innerHTML =  `<br></br>`;*/
     quizS.innerHTML = `<p>Your score is ${score}</p>`;
     let reset = document.getElementById('quiz-reset');
     reset.innerHTML = `<a href="index.html"><button id="reset-button">Reset quiz</button></a>`;
@@ -272,7 +259,6 @@ let suggestedRank = [
 
 function starfleetRank() {
     quizI.innerHTML = `${finalImages[score]}`;
-    quizA.remove();
     quizS.remove();
     quizR.innerHTML = `${suggestedRank[score]}`;
     quizN.innerHTML = `<a id ="application-link" href="application.html">Click here to apply to Starfleet!</a>`;

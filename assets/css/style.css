@@ -1,6 +1,7 @@
 /*google fonts link*/
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Orbitron:wght@900&display=swap');
 
+/*body styling hear affects the mainbackground, has a space/nebula image to contrast the main grey plane*/
 body {
     background-image: url("../images/nebula.jpg");
     background-position: center;
@@ -8,6 +9,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+/*base in the main space on which the quiz + form content is placed, its a grey background to contrast background image*/
 #base {
     background-color: rgb(170, 176, 180);
     width:75%;
@@ -24,6 +26,7 @@ body {
     text-align: center;
     border-radius: 0.5%;
 }
+/*main header, on both pages, uses Orbitron font*/
 h1 {
     color: rgb(33, 109, 195);
     text-shadow: 1px 1px 1px black;
@@ -31,11 +34,13 @@ h1 {
     font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
     display: inline;
 }
+/*rocket icons next to header*/
 .fa-rocket {
     display: inline;
     color: rgb(33, 109, 195);
     font-size: 275%;
 }
+/*all images are styled from this element, to give them a uniform size*/
 img {
     height: 300px;
     width: 450px;
@@ -45,6 +50,7 @@ h3 {
     color: rgb(33, 109, 195);
     font-size: 30px;
 }
+/*all non-specified p elements, uses Exo font*/
 p {
     color: rgb(29, 81, 139);
     font-size: 1.4em;
