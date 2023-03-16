@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--added meta description, keywords title for good SEO-->
+    <meta name="description" content= "Star Trek Quiz">
+    <meta name="keywords" content="Star Trek, Quiz, Starfleet, scifi, TV, trivia">
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
     <title>Star Trek Quiz - Application</title>
   </head>
   <body>
@@ -25,6 +25,7 @@
         </div>
       </header>
       <main>
+        <!--action="https://formdump.codeinstitute.net/" is provided by Code Institute, it tests if the form is working-->
         <form id="application-form" method="POST" action="https://formdump.codeinstitute.net/" target="_blank">
           <fieldset>
             <legend>
@@ -138,10 +139,12 @@
         </form>
       </main>
     </div>
-    <footer>
-      <h2 id="motto">Ex astris, scientia</h2>
-    </footer>
-    <script src="assets/javascript/script.js"></script>
-    <script src="https://kit.fontawesome.com/61cb99950a.js" crossorigin="anonymous"></script>
+    <!--motto is consistent an all steps throughout the quiz, it is unaffected by javascript, so can be set here-->
+    <h2 id="motto">Ex astris, scientia</h2>
+  </footer>
+  <!--javascript link, placed at bottom of page to ensure its loaded last, after the html elements-->
+  <script src="assets/javascript/script.js"></script>
+  <!--fontawesome link, enables use of fontawesome icons-->
+  <script src="https://kit.fontawesome.com/61cb99950a.js" crossorigin="anonymous"></script>
   </body>
 </html>
