@@ -113,7 +113,7 @@ let allQuestions = [{
 /*same as with the Qs and As, I have assigned images to variables, but I have used template literals for html coding. these variables can be called on by targetting the variable name with .innerHTML when manipulating the DOM*/
 let allImages = [`<img src="assets/images/data-spot.JPG" alt="Data with his cat" id="image">`,
     `<img src="assets/images/picard-beverage.JPG" alt="Picard with a drink" id="image">`,
-    `<img src="assets/images/worf-bat'leth.JPG" alt="Worf holding a Klingon sword" id="image">`,
+    `<img src="assets/images/worf-batleth.JPG" alt="Worf holding a Klingon sword" id="image">`,
     `<img src="assets/images/ships.JPG" alt="Romulan and Klingon ships" id="image">`,
     `<img src="assets/images/game.JPG" alt="Data playing a game" id="image">`,
     `<img src="assets/images/transporter.JPG" alt="A person who has beamed in on a transporter" id="image">`,
