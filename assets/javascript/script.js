@@ -292,5 +292,5 @@ function starfleetRank() {
     quizI.innerHTML = `${finalImages[score]}`;
     quizS.remove();
     quizR.innerHTML = `${suggestedRank[score]}`;
-    quizN.innerHTML = `<a id ="application-link" href="application.html">Click here to apply to Starfleet!</a>`;
+    quizN.innerHTML = `<a id ="application-link" href="application.html" aria-label="Application webpage , to join Starfleet">Click here to apply to Starfleet!</a>`;
 }
