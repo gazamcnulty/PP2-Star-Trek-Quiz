@@ -127,8 +127,8 @@ let allImages = [`<img src="assets/images/data-spot.JPG" alt="Data with his cat"
     `<img src="assets/images/transporter.JPG" alt="A person who has beamed in on a transporter">`,
     `<img src="assets/images/stargazer.JPG" alt="An old starship">`,
     `<img src="assets/images/omicron-theta.JPG" alt="Data's home planet">`,
-    `<img src="assets/images/Locutus.JPG" alt="Picard post-assimilation">`,
-    `<img src="assets/images/Ro.JPG" alt="Ro Laren holding a phaser">`,
+    `<img src="assets/images/locutus.JPG" alt="Picard post-assimilation">`,
+    `<img src="assets/images/ro.JPG" alt="Ro Laren holding a phaser">`,
     `<img src="assets/images/thanks.JPG" alt="Picard holding a beer">`
 ];
 
