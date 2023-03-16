@@ -1,473 +1,459 @@
 /*google fonts link*/
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Orbitron:wght@900&display=swap');
-
 /*body styling hear affects the mainbackground, has a space/nebula image to contrast the main grey plane*/
-body {
-    background-image: url("../images/nebula.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+ body {
+     background-image: url("../images/nebula.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
 }
 /*base in the main space on which the quiz + form content is placed, its a grey background to contrast background image*/
-#base {
-    background-color: rgb(170, 176, 180);
-    width:75%;
-    min-height: 750px;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 5%;
+ #base {
+     background-color: rgb(170, 176, 180);
+     width:75%;
+     min-height: 750px;
+     margin: 0 auto;
+     text-align: center;
+     border-radius: 5%;
 }
-#base-application {
-    background-color: rgb(170, 176, 180);
-    width:75%;
-    min-height: 950px;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 0.5%;
+ #base-application {
+     background-color: rgb(170, 176, 180);
+     width:75%;
+     min-height: 950px;
+     margin: 0 auto;
+     text-align: center;
+     border-radius: 0.5%;
 }
 /*main header, on both pages, uses Orbitron font*/
-h1 {
-    color: rgb(33, 109, 195);
-    text-shadow: 1px 1px 1px black;
-    font-size: 4em;
-    font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
-    display: inline;
+ h1 {
+     color: rgb(33, 109, 195);
+     text-shadow: 1px 1px 1px black;
+     font-size: 4em;
+     font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
+     display: inline;
 }
 /*rocket icons next to header*/
-.fa-rocket {
-    display: inline;
-    color: rgb(33, 109, 195);
-    font-size: 275%;
+ .fa-rocket {
+     display: inline;
+     color: rgb(33, 109, 195);
+     font-size: 275%;
 }
 /*all images are styled from this element, to give them a uniform size*/
-img {
-    height: 300px;
-    width: 450px;
-    border-radius: 2%;
+ img {
+     height: 300px;
+     width: 450px;
+     border-radius: 2%;
 }
-h3 {
-    color: rgb(33, 109, 195);
-    font-size: 30px;
+ h3 {
+     color: rgb(33, 109, 195);
+     font-size: 30px;
 }
 /*all non-specified p elements, uses Exo font*/
-p {
-    color: rgb(29, 81, 139);
-    font-size: 1.4em;
-    font-family: 'Exo 2', Geneva, Tahoma, sans-serif;
-    margin:0 auto;
-    padding: 10px;
-    max-width: 75%;
+ p {
+     color: rgb(29, 81, 139);
+     font-size: 1.4em;
+     font-family: 'Exo 2', Geneva, Tahoma, sans-serif;
+     margin:0 auto;
+     padding: 10px;
+     max-width: 75%;
 }
-#quiz-area {
-    margin:0 auto;
+ #quiz-area {
+     margin:0 auto;
 }
-a {
-    color: rgb(29, 81, 139);
-    text-decoration: none;
-    font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
+ a {
+     color: rgb(29, 81, 139);
+     text-decoration: none;
+     font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
 }
-#application-link {
-    font-size: 1.5em;
-    text-decoration:underline;
+ #application-link {
+     font-size: 1.5em;
+     text-decoration:underline;
 }
-#application-h {
-    color: rgb(33, 109, 195);
-    text-shadow: 1px 1px 1px black;
-    font-size: 2.5em;
-    font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
+ #application-h {
+     color: rgb(33, 109, 195);
+     text-shadow: 1px 1px 1px black;
+     font-size: 2.5em;
+     font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
 }
-.form-p {
-    font-size: 1.2em;
-    font-style: italic;
-    color: black;
-    padding: 10px;
+ .form-p {
+     font-size: 1.2em;
+     font-style: italic;
+     color: black;
+     padding: 10px;
 }
-#signoff {
-    font-size: 1.2em;
-    font-style: normal;
+ #signoff {
+     font-size: 1.2em;
+     font-style: normal;
 }
-#motto {
-    color:honeydew;
-    text-align: center;
+ #motto {
+     color:honeydew;
+     text-align: center;
 }
-
-button {
-    width: 150px;
-    height: 60px;
-    font-size: 1.1em;
-    font-family: 'Exo 2', Geneva, Tahoma, sans-serif;
-    vertical-align: middle;
-    color: white;
-    background-color: rgb(33, 109, 195);
+ button {
+     width: 150px;
+     height: 60px;
+     font-size: 1.1em;
+     font-family: 'Exo 2', Geneva, Tahoma, sans-serif;
+     vertical-align: middle;
+     color: white;
+     background-color: rgb(33, 109, 195);
 }
-#reset-button {
-    width: 100px;
-    height: 60px;
+ #reset-button {
+     width: 100px;
+     height: 60px;
 }
-/*reset button given absolute positioning, because the changing buttons + layout causes elements to jump and move around,
-this way the button stays in the same place. position dicated by bottom attribute, it is changed in other media queries*/
-#quiz-reset {
-    position: absolute;
-    top: 675px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 5px;
+/*reset button given absolute positioning, because the changing buttons + layout causes elements to jump and move around, this way the button stays in the same place. position dicated by bottom attribute, it is changed in other media queries*/
+ #quiz-reset {
+     position: absolute;
+     top: 675px;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     margin: 5px;
 }
-#quiz-next {
-    margin-bottom: 0;
+ #quiz-next {
+     margin-bottom: 0;
 }
-#suggestion-p {
-    font-size: 1.2em;
-    width:100%;
+ #suggestion-p {
+     font-size: 1.2em;
+     width:100%;
 }
 /*ensuring the form sections/borders are centered and spaced out between each other*/
-fieldset {
-    margin: 0 auto;
-    padding:20px;
+ fieldset {
+     margin: 0 auto;
+     padding:20px;
 }
 /*giving similar font to the label elements in form*/
-label {
-    display: block;
-    margin: 0 auto;
-    width:40%;
-    padding: 15px;
-    font-family: 'Exo 2', Geneva, Tahoma, sans-serif;
-    font-size: 1.2em;
+ label {
+     display: block;
+     margin: 0 auto;
+     width:40%;
+     padding: 15px;
+     font-family: 'Exo 2', Geneva, Tahoma, sans-serif;
+     font-size: 1.2em;
 }
 /*giving similar font to the legend elements in form*/
-legend {
-    font-weight: bold;
-    font-size: 20px;
-    padding: 20px;
-    font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
+ legend {
+     font-weight: bold;
+     font-size: 20px;
+     padding: 20px;
+     font-family: 'Orbitron', Geneva, Tahoma, sans-serif;
 }
-#sex-p {
-    color: black;
-    font-size: 1.2em;
+ #sex-p {
+     color: black;
+     font-size: 1.2em;
 }
-.radio-label {
-    display: inline;
+ .radio-label {
+     display: inline;
 }
-#end {
-    padding: 20px;
+ #end {
+     padding: 20px;
 }
-#submit {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
+ #submit {
+     text-align: center;
+     padding: 20px;
+     margin: 20px;
 }
 /*label for slightly smaller than average screen like horizontal tablet*/
-@media screen and (max-width: 1050px) {
-    #base {
-        width: 80%;
-        max-height: fit-content;
-        border-radius: 1%;
-   }
-    #base-application {
-        width: 85%;
-        max-height: fit-content;
-   }
-    h1 {
-        font-size: 3em;
-   }
-    .fa-rocket {
-        font-size: 200%;
-   }
-    img {
-        height: 225px;
-        width: 325px;
-        border-radius: 2%;
-   }
-   #question-area {
-    font-size: 1.2em;
-   }
-
-   #quiz-score {
-    font-size: 1.5em;
-   }
-
-    label {
-        width:95%;
-        padding: 15px 0 15px 0;
-        font-size: 1em;
-   }
-    p, legend {
-        font-size: 1em;
-        padding: 20px;
-   }
+ @media screen and (max-width: 1050px) {
+     #base {
+         width: 80%;
+         max-height: fit-content;
+         border-radius: 1%;
+    }
+     #base-application {
+         width: 85%;
+         max-height: fit-content;
+    }
+     h1 {
+         font-size: 3em;
+    }
+     .fa-rocket {
+         font-size: 200%;
+    }
+     img {
+         height: 225px;
+         width: 325px;
+         border-radius: 2%;
+    }
+     #question-area {
+         font-size: 1.2em;
+    }
+     #quiz-score {
+         font-size: 1.5em;
+    }
+     label {
+         width:95%;
+         padding: 15px 0 15px 0;
+         font-size: 1em;
+    }
+     p, legend {
+         font-size: 1em;
+         padding: 20px;
+    }
 }
 /*screen for very small tablet/kindle or horizontal phone*/
-@media screen and (max-width: 750px) {
-    .fa-rocket {
-        font-size: 150%;
-   }
-    #base {
-        width: 85%;
-        
-   }
-    img {
-        height: 175px;
-        width: 250px;
-        border-radius: 2%;
-   }
-    h1 {
-        font-size: 2em;
-        text-align: center;
-   }
-    button {
-        width: 80px;
-        height: 50px;
-        font-size: 0.8em;
-        margin: 5px;
-   }
-    #reset-button {
-        height: 40px;
-   }
-    #quiz-reset {
-        top: 650px;
-   }
-    #suggestion-p {
-        font-size: 1em;
-        margin: 0 auto;
-        width:100%;
-   }
-    #application-link {
-        font-size: 1em;
-   }
-    #application-h {
-        font-size: 1.5em;
-   }
-    textarea {
-        height: 100px;
-        width: 170px;
-   }
-    p {
-        font-size: 1em;
-   }
-    .form-p {
-        font-size: 1em;
-        padding: 5px;
-   }
-    .sex-p {
-        font-size: 1em;
-   }
-    #end {
-        padding: 0;
-   }
-    #signoff {
-        font-size: 0.8em;
-        padding: 0;
-   }
+ @media screen and (max-width: 750px) {
+     .fa-rocket {
+         font-size: 150%;
+    }
+     #base {
+         width: 85%;
+    }
+     img {
+         height: 175px;
+         width: 250px;
+         border-radius: 2%;
+    }
+     h1 {
+         font-size: 2em;
+         text-align: center;
+    }
+     button {
+         width: 80px;
+         height: 50px;
+         font-size: 0.8em;
+         margin: 5px;
+    }
+     #reset-button {
+         height: 40px;
+    }
+     #quiz-reset {
+         top: 650px;
+    }
+     #suggestion-p {
+         font-size: 1em;
+         margin: 0 auto;
+         width:100%;
+    }
+     #application-link {
+         font-size: 1em;
+    }
+     #application-h {
+         font-size: 1.5em;
+    }
+     textarea {
+         height: 100px;
+         width: 170px;
+    }
+     p {
+         font-size: 1em;
+    }
+     .form-p {
+         font-size: 1em;
+         padding: 5px;
+    }
+     .sex-p {
+         font-size: 1em;
+    }
+     #end {
+         padding: 0;
+    }
+     #signoff {
+         font-size: 0.8em;
+         padding: 0;
+    }
 }
-
 /*small screens such as smart phone*/
-@media screen and (max-width: 450px) {
-    img {
-        height: 140px;
-        width: 200px;
-        border-radius: 2%;
-   }
-
-   #question-area {
-    font-size: 1.1em;
-   }
-
-   #quiz-score {
-    font-size: 1.4em;
-   }
-
-   i.fa-rocket {
-    display: none;
+ @media screen and (max-width: 450px) {
+     img {
+         height: 140px;
+         width: 200px;
+         border-radius: 2%;
+    }
+     #question-area {
+         font-size: 1.1em;
+    }
+     #quiz-score {
+         font-size: 1.4em;
+    }
+     i.fa-rocket {
+         display: none;
+    }
+     #suggestion-p {
+         font-size: 0.75em;
+         padding: 5px 0 5px 0;
+    }
+     #quiz-reset {
+         top: 685px;
+    }
+     #base {
+         width: 90%;
+         min-height: 750px;
+    }
+     p, label, legend {
+         font-size: 0.8em;
+         padding: 10px;
+    }
+     fieldset {
+         border: none;
+    }
 }
-
-    #suggestion-p {
-        font-size: 0.75em;
-        padding: 5px 0 5px 0;
-   }
-    #quiz-reset {
-        top: 685px;
-   }
-    #base {
-        width: 90%;
-        min-height: 750px;
-   }
-    p, label, legend {
-        font-size: 0.8em;
-        padding: 10px;
-   }
-    fieldset {
-        border: none;
-   }
-}
-
 /*screen size for larger than average monitor*/
-@media only screen and (min-width: 1900px) {
-    #base {
-        min-height: 1600px;
-        width: 70%;
-   }
-    h1 {
-        font-size: 6em;
-   }
-    img {
-        height:400px;
-        width: 650px;
-   }
-    .fa-rocket {
-        font-size: 450%;
-        display: none;
-   }
-    #application-h {
-        font-size: 4em;
-   }
-    #application-link {
-        font-size: 2em;
-   }
-    #question-area {
-        font-size: 2.5em;
-   }
-    #answer-list {
-        font-size: 1.5em;
-   }
-    #quiz-score {
-        font-size: 1.5em;
-   }
-    #reset-button {
-        width: 220px;
-        height: 100px;
-        font-size: 2em;
-        margin: 20px;
-   }
-    #rank {
-        width: 260px;
-        height: 140px;
-   }
-    #quiz-reset {
-        top: 1200px;
-   }
-    #motto {
-        font-size: 3em;
-   }
-    p, label, legend {
-        font-size: 2em;
-        padding: 20px;
-   }
-    #start {
-        font-size: 1.5em;
-   }
-    #quiz-next {
-        font-size: 1.5em;
-   }
-    button {
-        width: 220px;
-        height: 100px;
-        font-size: 1.5em;
-        margin: 10px;
-   }
-    #name, #email, #age, #location, #field, #gender-label, #medical-history, #species, #species-other {
-        font-size: 0.7em;
-        width: 220px;
-        height: 30px;
-   }
-    .form-p {
-        font-size: 1.75em;
-   }
-    .sex-p {
-        font-size: 1em;
-   }
-    #signoff {
-        font-size: 1.75em;
-   }
-    #suggestion-p {
-        font-size: 2.5em;
-   }
+ @media only screen and (min-width: 1900px) {
+     #base {
+         min-height: 1600px;
+         width: 70%;
+    }
+     h1 {
+         font-size: 6em;
+    }
+     img {
+         height:400px;
+         width: 650px;
+    }
+     .fa-rocket {
+         font-size: 450%;
+         display: none;
+    }
+     #application-h {
+         font-size: 4em;
+    }
+     #application-link {
+         font-size: 2em;
+    }
+     #question-area {
+         font-size: 2.5em;
+    }
+     #answer-list {
+         font-size: 1.5em;
+    }
+     #quiz-score {
+         font-size: 1.5em;
+    }
+     #reset-button {
+         width: 220px;
+         height: 100px;
+         font-size: 2em;
+         margin: 20px;
+    }
+     #rank {
+         width: 260px;
+         height: 140px;
+    }
+     #quiz-reset {
+         top: 1200px;
+    }
+     #motto {
+         font-size: 3em;
+    }
+     p, label, legend {
+         font-size: 2em;
+         padding: 20px;
+    }
+     #start {
+         font-size: 1.5em;
+    }
+     #quiz-next {
+         font-size: 1.5em;
+    }
+     button {
+         width: 220px;
+         height: 100px;
+         font-size: 1.5em;
+         margin: 10px;
+    }
+     #name, #email, #age, #location, #field, #gender-label, #medical-history, #species, #species-other {
+         font-size: 0.7em;
+         width: 220px;
+         height: 30px;
+    }
+     .form-p {
+         font-size: 1.75em;
+    }
+     .sex-p {
+         font-size: 1em;
+    }
+     #signoff {
+         font-size: 1.75em;
+    }
+     #suggestion-p {
+         font-size: 2.5em;
+    }
 }
-
-
 /*screen size for very large 4k monitor / tv*/
-@media only screen and (min-width: 3800px) {
-    h1 {
-        font-size: 8em;
-   }
-    #base {
-        min-height: 2000px;
-        width: 65%;
-   }
-    button {
-        width: 250px;
-        height: 150px;
-        font-size: 2em;
-        margin: 20px;
-   }
-    #reset-button {
-        width: 250px;
-        height: 150px;
-        font-size: 2em;
-        margin: 20px;
-   }
-    #question-area {
-        font-size:3em;
-   }
-    #quiz-reset {
-        top: 1500px;
-   }
-    #quiz-score {
-        font-size: 1.25em;
-   }
-    img {
-        height:650px;
-        width: 1000px;
-   }
-    .fa-rocket {
-        font-size: 600%;
-   }
-    #application-link {
-        font-size: 3em;
-   }
-    #application-h {
-        font-size: 6em;
-   }
-    h3 {
-        font-size: 4em;
-   }
-    #motto {
-        font-size: 4em;
-   }
-    #suggestion-p {
-        font-size: 3em;
-   }
-    p, label, legend {
-        font-size: 2.5em;
-        padding: 40px;
-   }
-    #name, #email, #age, #location, #field, #gender-label, #medical-history, #species, #species-other {
-        font-size: 0.7em;
-        width: 250px;
-        height: 40px;
-   }
-    input {
-        width: 40px;
-        height: 20px;
-   }
-    #submit {
-        width: 250px;
-        height: 110px;
-        font-size: 2em;
-   }
-    .form-p {
-        font-size: 2.5em;
-   }
-    #sex-p {
-        font-size: 2.5em;
-   }
-    textarea {
-        height: 300px;
-        width: 650px;
-        font-size: 2em;
-   }
-    #signoff {
-        font-size: 3em;
-   }
+ @media only screen and (min-width: 3800px) {
+     h1 {
+         font-size: 8em;
+    }
+     #base {
+         min-height: 2000px;
+         width: 65%;
+    }
+     button {
+         width: 250px;
+         height: 150px;
+         font-size: 2em;
+         margin: 20px;
+    }
+     #reset-button {
+         width: 250px;
+         height: 150px;
+         font-size: 2em;
+         margin: 20px;
+    }
+     #question-area {
+         font-size:3em;
+    }
+     #quiz-reset {
+         top: 1500px;
+    }
+     #quiz-score {
+         font-size: 1.25em;
+    }
+     img {
+         height:650px;
+         width: 1000px;
+    }
+     .fa-rocket {
+         font-size: 600%;
+    }
+     #application-link {
+         font-size: 3em;
+    }
+     #application-h {
+         font-size: 6em;
+    }
+     h3 {
+         font-size: 4em;
+    }
+     #motto {
+         font-size: 4em;
+    }
+     #suggestion-p {
+         font-size: 3em;
+    }
+     p, label, legend {
+         font-size: 2.5em;
+         padding: 40px;
+    }
+     #name, #email, #age, #location, #field, #gender-label, #medical-history, #species, #species-other {
+         font-size: 0.7em;
+         width: 250px;
+         height: 40px;
+    }
+     input {
+         width: 40px;
+         height: 20px;
+    }
+     #submit {
+         width: 250px;
+         height: 110px;
+         font-size: 2em;
+    }
+     .form-p {
+         font-size: 2.5em;
+    }
+     #sex-p {
+         font-size: 2.5em;
+    }
+     textarea {
+         height: 300px;
+         width: 650px;
+         font-size: 2em;
+    }
+     #signoff {
+         font-size: 3em;
+    }
 }
