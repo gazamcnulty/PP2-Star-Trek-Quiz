@@ -170,14 +170,18 @@ The buttons have a uniform size and are large. This is to make it very obvious t
 
 Above the answer buttons, I have some text which asks the trivia question. This is using font Exo2 , with more standard fonts as backup. Exo2 is another 'sci-fi' style font, but it is a bit more readable than the more exotic Orbitron font used in the header. I wanted these to look normal enough compared to some of the other stylised elements, so the user can just focus on the content of the question rather than the visual design.
 
-
 ![Image](assets/documents/readme-screens/question-font.JPG)
+
+I used a rocket icon, which was downloaded from the website favicon.io https://favicon.io/ . This was placed a link element in the head of both index.html and application.html. This favicon creates a small icon that shows in the tab of the browser. The rocket icon matches the font awesome rocket icon I have used next to the header and it matches the genre of Star Trek. This is only a small change but it adds to the visual consistency of the page and makes it look a bit more professional.
+
+![Image](assets/documents/readme-screens/rocket-tab.JPG)
+
 
 The question is always visible at the same time as the answer buttons, though once it is pressed the content changes. The question line is replaced with another line of text which advises whether the answer was right or wrong. The answer buttons is replaced by a single 'next' button which allows the user to proceed to the next question. My reason for this was to prevent the user from seeing the question + answer buttons after they had chosen an answer. I wanted them to be able to proceed straight to the next question without dwelling too much on the previous one. However I also didn't want to force them through immediately -  I wanted to give them the opportunity to reflect for a moment on the success/failure of the attempt, and then they can proceed to the next question when they are ready. This has a secondary purpose of preventing the user from selecting the same answer multiple times.
  I thought about having more urgent elements , like a countdown timer or quick change but I decided not to. I want this to be fun , chill quiz not an urgent race against time.
 
 
- ![Image](assets/documents/readme-screens/next)
+ ![Image](assets/documents/readme-screens/next.JPG)
 
 Under the answer buttons and next button, there is a line of text providing the user score. This counts how many correct answers the user got and displays them here. I thought about adding some more complex visual elements such as a progress bar or color to indicate how well or badly they are doing - but again I felt this went against the ethos of the page . It's just a fun quiz about star trek , the real intent is to generate interest and input from Star Trek fans, to cause them to share and discuss with their friends. I don't want people to feel bad or feel under pressure about how badly or well they are doing in the quiz.
 
