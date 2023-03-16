@@ -309,6 +309,8 @@ The W3C css Validator was used to validate and check for errors in the css code.
 
 ![Image](assets/documents/validation/css-no-errors.JPG)
 
+- <a href="/https://gazamcnulty.github.io/workspace/quiz-practice/assets/documents/readme-screens/css-validator.pdf"></a>
+
 
 CodeBeautify Javascript Validator + jshint.com were used to validate and check for errors in the javascript code. Upon completion, they both warned of an issue with 4 named variables, being unused.
 
@@ -331,10 +333,12 @@ Similarly , other Code Institute users have encountered the issue and ignored it
 **browser testing**
 
 The website was tested by pasting the external https link https://gazamcnulty.github.io/quiz-practice/ to the following browsers
-Chrome presented no issues.
-Edge presented no issues.
-Safari presented no issues.
-Firefox has slightly changed the appearance of the legend element in application.html.  It orients the legend-text to the left of the fieldset, instead of being centered like in chrome. This is a known issue with firefox affecting legend elements. While it is a visual variant I don't consider it a bug requiring correction. In future incarnations I would look into using firefox targetting css to change the appearance in that browser.
+
+- Chrome presented no issues.
+- Edge presented no issues.
+- Safari presented no issues.
+- Firefox has slightly changed the appearance of the legend element in application.html.  It orients the legend-text to the left of the fieldset, instead of being centered like in chrome. This is a known issue with firefox affecting legend elements. While it is a visual variant I don't consider it a bug requiring correction. In future incarnations I would look into using firefox targetting css to change the appearance in that browser.
+![Image](assets/documents/readme-screens/firefox-legend.JPG)
 
 **scenario testing**
 I tested various scenarios on the web page, to see if I could discover any bugs, errors or visual issues. As this is a relatively simple quiz as opposed to a complex website, there aren't too many variables for a user to affect but I tested as much as possible to be safe.
@@ -344,6 +348,13 @@ I clicked all links , including the header link from index.html , the applicatio
 
 - Checking buttons 
 I clicked on all buttons , including start game, next question, reset button, is starfleet the career for you, and all of the answer buttons on index.html. Start game succesfully triggers the first quiz question. Next question succesfully moves user from result of current question to the next question. Reset question resets the quiz and brings user back to the home page, same as header link. Is starfleet the career for you shows user the endgame and gives a paragraph based on users final score, as intended. Submit button on application.html succesfully submits the form info via https://formdump.codeinstitute.net/ 
+
+- Checking correct answers 
+I have checked that all of the possible answers, provide the intended result as to whether they are 'correct' or not. The only answers that do yield a correct result, are the ones I have designated as having index item 'correct' in the array. I tested answer in every question , the correct ones show a resonse that it was answered correctly , the incorrect ones show a response that it was not answered correctly. This was the intended function, I am satisfied with the operation.
+
+- Cheating / glitching 
+I have tried to find a way to trick the quiz or cheat for a better result. I have tried this by clicking a wrong answer, then pressing the 'back arrow' key in the browser window, to see if it will let me try the same question again. This will not work, since the questions are not on seperate web pages it won't let the user go back, its just the one page. I also tried to see if I could keep my score after resetting the quiz by either clicking the reset button or header link. However, in both of these cases, the score is automatically brought back to zero, it does not carry over through resets or multiple attempts. 
+It is possible to check the correct answers by looking at the javascript in devtools, however I am satisfied that there isn't a way for a user to 'cheat' without looking at the background code. Within the scope of this project , I am satisfied that the quiz functions and can't be 'cheated'
 
 - Checking form
 The form lets me succesfully submit the info while pressing the submit button if I have put info in all of the categories / input elements. it 
@@ -357,26 +368,45 @@ I have checked over all parts of the quiz and I find the imagery and text to be 
 - Checking responsiveness
 I have checked the responsiveness of various simulated screensizes, per developer tools. I have checked in standard desktop monitor size, smartphones like Samsung Galaxy 8 , Samsung Fold, iphone SE , iphone XR , ipad , 
 Across all the variants of height and width, the only issues with elements overlapping / not looking correct occurs at very small sizes such as width 275px. The closest to this is Samsung Galaxy Fold device with a width of 280px and it appears fine on that screen, no overlap.
-I have placed media queries to compensate for small screens and large monitors up to 4k resolution. I have tested across all of these and found no issues with presentation or function of the website.
+I have placed media queries to compensate for small screens and large monitors up to 4k resolution. I have tested across all of these and found no issues with presentation or function of the website. I am satisfied with the testing of the responsiveness.
+![Image](assets/documents/readme-screens/screens2.JPG)
 
 
 ## Known bugs and issues
+- ovelap elements 
+On very narrow screens , it is possible that the 10/10 results paragraph will overlap with the reset button. This only occurs at a screen width less than 270px and if you happen to be viewnig the 10/10 results screen. The closest device to this is Samsung Galaxy Fold device with a width of 280px and it appears fine on that screen, no overlap. This is something I could look at in the future however on all testable devices the site functions as intended, no issues.
+![Image](assets/documents/readme-screens/270.JPG)
+
+- legend element in firefox browser 
+Firefox has slightly changed the appearance of the legend element in application.html.  It orients the legend-text to the left of the fieldset, instead of being centered like in chrome. This is a known issue with firefox affecting legend elements. While it is a visual variant I don't consider it a bug requiring correction. In future incarnations I would look into using firefox targetting css to change the appearance in that browser.
+![Image](assets/documents/readme-screens/firefox-legend.JPG)
+
+- Four unused variables
+CodeBeautify Javascript Validator + jshint.com were used to validate and check for errors in the javascript code. Upon completion, they both warned of an issue with 4 named variables, being unused.
+
+![Image](assets/documents/validation/jshint.JPG)
+![Image](assets/documents/validation/beautify.JPG)
+
+ These variables refer to 4 functions, runGame(), checkAnswer(), nextQuestion(), starfleetRank(). I have done some investigation into this, I have found that some users will use js comments such as /* jshint unused:vars */ or /*jshint unused: false*/ to force jshint to ignore this error. See below discussion on stackoverflow
+https://stackoverflow.com/questions/30673360/prevent-jshint-from-reporting-that-a-variable-is-unused-for-specific-local-varia
+
+Similarly , other Code Institute users have encountered the issue and ignored it. In this instance I am logging a record of the bug for future reference. I will come back to this another time to see if there is a way to better optimize the javascript code to prevent this bug.
 
 ## Acknowledgements and credits
 
 
-
-
 Star Trek is a fictional television show and movie franchise, all related copyrights and trademarks are owned by CBS and Paramount
+*Star Trek, Star Trek: The Animated Series, Star Trek: The Next Generation, Star Trek: Deep Space Nine, Star Trek: Voyager, Star Trek: Enterprise, Star Trek: Discovery, Star Trek: Short Treks, Star Trek: Picard, Star Trek: Lower Decks, Star Trek: Prodigy, and Star Trek: Strange New Worlds are all registered trademarks of Paramount Global (previously ViacomCBS and/or Paramount Pictures and/or CBS Broadcasting, Inc.).*
 
 All images used of Star Trek characters have been screenshots, taken by myself from episodes of Star Trek: The Next Generation
 
 Elements of Starfleet survey were taken from another html project of which is my own work/code. This was a project I did last year for the online course 'Responsive Web Design Certification' on the website freeCodeCamp 
  This page was not uploaded onto github, it doesn't exist as a publicly accessible web page, however I wanted to note the fact that I took elements from it here. The original has been changed, added to and greatly expanded upon for this project. 
-Click here to view an image of how the original project page appeared
+![Image](assets/documents/readme-screens/original-survey.JPG)
 
 Background image of space / nebula, taken from reddit. Uploaded by u/amodep1 to r/ultrahdwallpapers
-[r/ultrahdwallpapers](https://www.reddit.com/r/ultrahdwallpapers/comments/86hp1i/galaxy_nebula_blurring_stars_3840x2160/ )
+[r/ultrahdwallpapers](https://www.reddit.com/r/ultrahdwallpapers/comments/86hp1i/galaxy_nebula_blurring_stars_3840x2160/ ) 
+(https://www.reddit.com/r/ultrahdwallpapers/comments/86hp1i/galaxy_nebula_blurring_stars_3840x2160/ )
 
 Google Fonts was used to import fonts 'Orbitron', 'Exo2', 
 

@@ -1,7 +1,9 @@
 /*jshint -W033 */
 
+
+
 //on pageload, below function runs and shows welcome section
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded",function() {
 
     let welcomeA = document.getElementById('welcome-area');
     welcomeA.innerHTML = `
