@@ -145,7 +145,7 @@ legend {
     padding: 20px;
     margin: 20px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
     #base {
         width: 80%;
         max-height: fit-content;
@@ -166,6 +166,14 @@ legend {
         width: 325px;
         border-radius: 2%;
    }
+   #question-area {
+    font-size: 1.2em;
+   }
+
+   #quiz-score {
+    font-size: 1.5em;
+   }
+
     label {
         width:95%;
         padding: 15px 0 15px 0;
@@ -247,12 +255,20 @@ legend {
         border-radius: 2%;
    }
 
+   #question-area {
+    font-size: 1.1em;
+   }
+
+   #quiz-score {
+    font-size: 1.4em;
+   }
+
    i.fa-rocket {
     display: none;
 }
 
     #suggestion-p {
-        font-size: 0.8em;
+        font-size: 0.85em;
         padding: 10px 0 10px 0;
    }
     #quiz-reset {

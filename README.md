@@ -21,6 +21,7 @@ https://gazamcnulty.github.io/quiz-practice/
 - Wireframes
 - Technologies 
 - Validation and Testing 
+- Known bugs and issues
 - Acknowledgements and Credits 
 
 ## Introduction and summary
@@ -54,30 +55,30 @@ At the end of the day , the real intent of this page is to keep the Star Trek di
 
 ## User-experience/User-stories
 
-New users : 
+**New users :** 
 I want new users to find the website amusing and entertaining. It should be novelty to find a simple 10 question Star Trek quiz which tests their knowledge of the lore. It will be a surprise that it goes beyond the trivia questions and presents additional feedback based on their score. The recommendation to apply and the Starfleet application should make the user feel immersed and entertained. The user should want to share the page with their friends who are also Star Trek fans , so they can compare scores and discuss the show.
 
-**New user story**
+New user story
 *"I was bored the other day and went on to my favorite Star Trek fan page on Facebook. I noticed they had shared a link to a Star Trek quiz and people were commenting on it comparing scores. Being a well versed fan, I thought I should give it a go. The page was fairly simple, it didn't have a lot of bells and whistles and let me get straight into the quiz. Each question had 4 possible answers and a picture of the character or topic. After choosing an answer, it told me if it was correct or not and then presented a new button so I could go to the next question. I honestly thought it was pretty easy and I got an 8/10. What surprised me was that it gave me feedback on my score as if I was a prospective applicant to Starfleet. I got an 8/10 so it gave me the rank of captain! Finally it presented a button to apply to Starfleet, when I clicked the link it brought up a full application page. It was funny and unexpected, I felt as if I was filling out a real application to Starfleet. I went back to the Facebook page and commented on my score and rank, a few people replied back to me with theirs and we got to talking about Star Trek. It was just a short silly quiz but I enjoy any opportunity to talk about Star Trek."*
 
-Return users:
+**Return users:**
 I want return users to remember exactly how the site works so they can jump straight back into the quiz if they want to. The quiz contains reset buttons on every page so they can always reset if they want to try to get a perfect score. Realistically, I don't expect too many return users outside of a few specific scenarios : users replaying for a perfect score, users opening the page themselves to show or share with friends, or Star Trek content creators who are also looking to create a Star Trek quiz/game ( they may look at this one as a frame of comparison)
 
-**Return user story**
+Return user story
 *"I remembered the Star Trek quiz that I had taken last week. It was a short simple quiz with a surprising bit of lore and a Starfleet application at the end. It had led to me discussing the quiz with other Star Trek fans online and I actually added a couple of them as Facebook friends. I was glad it had given me the excuse to chat about Star Trek with some new friends. I remembered I had gotten an 8/10 so I decided to go back to the website to see if I could get a perfect score. I had been given the rank of 'Captain' for my 8/10 , so I was curious to see what the rank would be if I got a 10/10 - I was similarly curious to see what would happen for low scores. I played it again from start to finish and got another 8/10. This time I didn't proceed to the application, instead I reset the game and tried again. After a few attempts I got a perfect score. Lucky for me there was a reset button on the page , so whenever I got one wrong I could hit reset to start again. I was surprised and delighted I got the rank of 'Q', this is a fictional character in the show who is omnipotent and omniscient, the feedback on the rank was almost a bit meta. I was pleased with this and decided to share my score again on Facebook. A few of the users on the Star Trek fan page commented back and I added them as Facebook friends. I challenged them to see if they could match my perfect score."*
 
-Frequent users: 
+**Frequent users:**
 I want frequent users to be able to navigate the page quickly and efficiently. It is not overly complex so I feel like a frequent user will know exactly how the quiz works. Similarly I don't really expect people to frequent the site. If however I am able to implement random questions ( as opposed to the same fixed 10 questions) this could create a cause for users to frequent the page every now and then.
 
 I don't have an idea for frequent user stories at this time, but it is something I will come back to with future updates to this page. If it becomes more complex with more questions and replayability, there will be some consideration for frequent user stories
 
 ## FEATURES
 
-- Overall structure
+**Overall structure**
 The Star Trek Quiz site consists of just two pages, index.html and application.html. Most of the features and interaction will take place on index.html, with different elements and features being swapped in and out by javascript functions. application.html is a separate web page containing a form. While it may have been possible to have more pages, maybe even a different page for each of the 10 trivia questions, I chose to just use one or two for this project. Mainly because the purpose of the project is to test the newly learned javascript. Similar to the lovemaths example, javascript can be used to remove and add content to a html page. So instead of having loads of different pages, I can just have one or two html pages and let the javascript change it as needed. 
 I could have extended this as far as just having one page and letting the javascript replace all of the quiz content with the application, however I don't think this would be best practice for a real world website. The index.html is all about the trivia questions , so the appearance and format is mostly unchanged. This makes it easier for the javascript to use the existing framework in the html and insert or remove content as needed. But the form is a completely different structure so it would not have been as clean using the javascript to replace the quiz questions with a form. Keeping it on a seperate page also makes it easier to locate bugs or change the html. I believe it is also a better user experience to 'leave' the quiz page and go to a brand new webpage with a different structure.
 
-- index.html
+**index.html**
 
 
 The first thing that is visible is the header at the top of the page, with the words STAR TREK QUIZ . It is in big bold letters at the top of the page, so the user will immediately know the purpose of the page. The header is also a link, so if they click on the title it will bring them back to the landing page and reset the quiz. There will also be a reset button that serves the same function, however this is good UX as some users if confused or looking to get back to the start will try to click on the main header at the top of the page. This ensures that no matter where the user is in the quiz or application, they can click the title at the top to reset the quiz. 
@@ -124,7 +125,7 @@ Upon clicking that button , the website provides feedback on the user's score. D
 ![Image](assets/documents/readme-screens/ranking-suggestion-small.JPG)
 
 
--application.html
+**application.html**
 The Starfleet application is for entertainment purposes similar to the quiz, it is a service application to the fictional entity Starfleet. It asks the user for various personal info as if they were applying to an academy or military. It also contains a section for non-humans / aliens. It asks for a short paragraph as to why the user wants to join Starfleet. In the questions and closing paragraph, it provides lore on the fictional Star Trek universe. This allows immersion and the user to 'roleplay' as a potential cadet of Starfleet.
 
 
@@ -273,10 +274,10 @@ Languages: -HTML5 -CSS -javascript
 
 ## Creation and Deployment
 
-- creation / template
+**creation / template**
 The code was created from the Code-Institute-Org/gitpod-full-template on GitHub. [Code Institute Template on GitHub](https://github.com/Code-Institute-Org/gitpod-full-template) This was accessed by clicking on 'use this template' , choosing a name , description. After this I clicked create repository. Clicked Gitpod , this created a new workspace for me to use in Gitpod , along with tools provided by Code Institute
 
-- deployment
+**deployment**
 On my GitHub page, I can access my repositories. The repository for this particular project is located here.
 From here you can click on 'Settings' , then on the left side click on 'Pages'
 Click on 'Sources' , click 'Master Branch' 
@@ -286,18 +287,19 @@ It provides a link that can now be used to view the website externally, any push
 
 see here for further info on deployment/ publishing https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
-- cloning the repository
+**cloning the repository**
 on the main repository page, click code, then copy the url. If on windows, you need to use Command Line with git bash to move it to the local directory. This can be done with the Terminal on Mac. In whichever tool,  type "git clone" into the command line then paste in the copied url and press the Enter key to clone the repository
 
 see here for further info on cloning a repository https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
-- fork the repository
+**fork the repository**
  go to the main repository page, then at the top click on 'fork' . Select an owner fo the new fork (this would be your own github username). select the name for the new fork per github *"forks are named the same as their upstream repositories. You can change the name of the fork to distinguish it further.* add a description . choose to copy defaul or all branches. as standard, only the default is needed. click 'create fork' to complete the fork process
 
 see here for further info on forking https://docs.github.com/en/get-started/quickstart/fork-a-repo
 
 ## Validation and testing
 
+- validation 
 The W3C html Validator was used to validate and check for errors in the html code. Upon completion, it found no errors in index.html, application.html
 
 ![Image](assets/documents/validation/html-no-errors.JPG)
@@ -318,6 +320,47 @@ https://stackoverflow.com/questions/30673360/prevent-jshint-from-reporting-that-
 
 Similarly , other Code Institute users have encountered the issue and ignored it. In this instance I am logging a record of the bug for future reference. I will come back to this another time to see if there is a way to better optimize the javascript code to prevent this bug.
 
+**format / beautify**
+
+[Code Beautify](https://codebeautify.org/htmlviewer) was used to beautify / format the html code 
+
+[Dan's Tools CSS Formatter ](https://www.cleancss.com/css-beautify/) was used to beautify / format the css code 
+
+[CodeBeautify Javascript Validator ](https://codebeautify.org/jsvalidate) was used to beautify / format the javascript code 
+
+**browser testing**
+
+The website was tested by pasting the external https link https://gazamcnulty.github.io/quiz-practice/ to the following browsers
+Chrome presented no issues.
+Edge presented no issues.
+Safari presented no issues.
+Firefox has slightly changed the appearance of the legend element in application.html.  It orients the legend-text to the left of the fieldset, instead of being centered like in chrome. This is a known issue with firefox affecting legend elements. While it is a visual variant I don't consider it a bug requiring correction. In future incarnations I would look into using firefox targetting css to change the appearance in that browser.
+
+**scenario testing**
+I tested various scenarios on the web page, to see if I could discover any bugs, errors or visual issues. As this is a relatively simple quiz as opposed to a complex website, there aren't too many variables for a user to affect but I tested as much as possible to be safe.
+
+- Checking links 
+I clicked all links , including the header link from index.html , the application link at the end of the quiz on index.html and the header link from application.html. They all result in the quiz being reset back on the homescreen , as intended.
+
+- Checking buttons 
+I clicked on all buttons , including start game, next question, reset button, is starfleet the career for you, and all of the answer buttons on index.html. Start game succesfully triggers the first quiz question. Next question succesfully moves user from result of current question to the next question. Reset question resets the quiz and brings user back to the home page, same as header link. Is starfleet the career for you shows user the endgame and gives a paragraph based on users final score, as intended. Submit button on application.html succesfully submits the form info via https://formdump.codeinstitute.net/ 
+
+- Checking form
+The form lets me succesfully submit the info while pressing the submit button if I have put info in all of the categories / input elements. it 
+submits the form info via https://formdump.codeinstitute.net/  
+The form will not let me submit if I do not complete the 'required' parts of the form, which is name, email, age , address and terms + conditions. This is intended as I wanted some information to be a requirement.
+The form will let me submit if I only complete the 'required' parts of the form, it will submit if none / some / or all other parts are completed or empty. This is intended
+
+- Checking visuals , navigation , readability
+I have checked over all parts of the quiz and I find the imagery and text to be clearly readable. Navigation is very straight forward, you can't get 'lost' as its essentially one direction. The only way to deviate from navigation is if you click the link or button to reset, which just lets you start again. I find the backgrounds and color usage to not be distracting from the primary content of the quiz page.
+
+- Checking responsiveness
+I have checked the responsiveness of various simulated screensizes, per developer tools. I have checked in standard desktop monitor size, smartphones like Samsung Galaxy 8 , Samsung Fold, iphone SE , iphone XR , ipad , 
+Across all the variants of height and width, the only issues with elements overlapping / not looking correct occurs at very small sizes such as width 275px. The closest to this is Samsung Galaxy Fold device with a width of 280px and it appears fine on that screen, no overlap.
+I have placed media queries to compensate for small screens and large monitors up to 4k resolution. I have tested across all of these and found no issues with presentation or function of the website.
+
+
+## Known bugs and issues
 
 ## Acknowledgements and credits
 
@@ -338,6 +381,8 @@ Background image of space / nebula, taken from reddit. Uploaded by u/amodep1 to 
 Google Fonts was used to import fonts 'Orbitron', 'Exo2', 
 
 Font Awesome was used to import icons
+
+I used chrome dev tools to check css issues and responsiveness / media queries
 
 I used a pixel image checker to compare colors from an image from the television show.
 
