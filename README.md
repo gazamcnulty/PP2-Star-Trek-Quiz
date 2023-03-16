@@ -301,6 +301,9 @@ see here for further info on cloning a repository https://docs.github.com/en/rep
 
 see here for further info on forking https://docs.github.com/en/get-started/quickstart/fork-a-repo
 
+**404**
+I also created a simple 404 page on GitHub, so that in the event of a an error or mistyped url failing to yield the correct webpage, the 404 error page will advise the user that there has been an error. It is unlikely this will occur as the Star Trek Quiz isn't so complex that it could cause such an error, however it is better to have it just in case. 
+
 ## Validation and testing
 
 **validation**
