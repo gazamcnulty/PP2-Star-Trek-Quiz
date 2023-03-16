@@ -390,6 +390,39 @@ Across all the variants of height and width, the only issues with elements overl
 I have placed media queries to compensate for small screens and large monitors up to 4k resolution. I have tested across all of these and found no issues with presentation or function of the website. I am satisfied with the testing of the responsiveness.
 ![Image](assets/documents/readme-screens/screens2.JPG)
 
+## Answers Quick Reference
+*In the event anyone wants a quick reference of the correct answers, for testing purposes in observing the various end game rankings , which are dependent on score*
+question: "What is the name of Data's cat?",
+answer: Spot
+    
+question: "What is Picard's favourite beverage?",
+answer : Earl grey tea
+
+question: "What is the name of the Klingon sword?",
+answer: Bat'leth
+    
+question: "What starship technology is used by Klingons and Romulans, but not by Starfleet?",
+answer: Cloaking invisibility
+    
+question: "What game did the bridge officers of the Enterprise-D play on a regular basis?",
+answer: Poker
+    
+question: "Who was the original transporter chief on the Enterprise-D?",
+answer: Miles O'Brien
+
+question: "What ship did Picard command, prior to the Enterprise?",
+answer :The Stargazer
+    
+question: "What killed all the people on Data's home Omicron Theta?",
+answer: Crystalline Entity
+    
+question: "Where in space did  Locutus of borg battle against Starfleet?",
+answers: Wolf-359
+    
+question: "What was the name of the anti-Cardassian terrorist group?",
+answer: The Maquis
+
+
 
 ## Known bugs and issues
 - ovelap elements 
