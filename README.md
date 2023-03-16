@@ -299,17 +299,18 @@ see here for further info on forking https://docs.github.com/en/get-started/quic
 
 ## Validation and testing
 
-- validation 
-The W3C html Validator was used to validate and check for errors in the html code. Upon completion, it found no errors in index.html, application.html
+**validation**
+The W3C html Validator was used to validate and check for errors in the html code. Upon completion, it found no errors in index.html
+![Image](assets/documents/validation/index-no-errors.JPG)
 
-![Image](assets/documents/validation/html-no-errors.JPG)
+
+W3C html Validator also found no errors in application.html
+![Image](assets/documents/validation/application-no-errors.JPG)
 
 
 The W3C css Validator was used to validate and check for errors in the css code. Upon completion, it found no errors in style.css.
 
 ![Image](assets/documents/validation/css-no-errors.JPG)
-
-- <a href="https://https://github.com/gazamcnulty/quiz-practice/blob/main/assets/documents/readme-screens/css-validator.pdf" target="_blank">CSS Validator Screen</a>
 
 
 CodeBeautify Javascript Validator + jshint.com were used to validate and check for errors in the javascript code. Upon completion, they both warned of an issue with 4 named variables, being unused.
@@ -322,7 +323,15 @@ https://stackoverflow.com/questions/30673360/prevent-jshint-from-reporting-that-
 
 Similarly , other Code Institute users have encountered the issue and ignored it. In this instance I am logging a record of the bug for future reference. I will come back to this another time to see if there is a way to better optimize the javascript code to prevent this bug.
 
-**format / beautify**
+**Lighthouse test**
+I performed a lighthouse test on PageSpeedInsights https://pagespeed.web.dev/ 
+
+- The desktop version recieved a score of over 90%, in all categories : Performance, Accessibility, Best Practices, SEO
+![Image](assets/documents/readme-screens/lighthouse-desktop.JPG)
+- The mobile version recieved a score of over 90%, in all categories : Performance, Accessibility, Best Practices, SEO
+![Image](assets/documents/readme-screens/lighthouse-mobile.JPG)
+
+**format/beautify**
 
 [Code Beautify](https://codebeautify.org/htmlviewer) was used to beautify / format the html code 
 
@@ -395,28 +404,28 @@ Similarly , other Code Institute users have encountered the issue and ignored it
 ## Acknowledgements and credits
 
 
-Star Trek is a fictional television show and movie franchise, all related copyrights and trademarks are owned by CBS and Paramount
+- Star Trek is a fictional television show and movie franchise, all related copyrights and trademarks are owned by CBS and Paramount
 *Star Trek, Star Trek: The Animated Series, Star Trek: The Next Generation, Star Trek: Deep Space Nine, Star Trek: Voyager, Star Trek: Enterprise, Star Trek: Discovery, Star Trek: Short Treks, Star Trek: Picard, Star Trek: Lower Decks, Star Trek: Prodigy, and Star Trek: Strange New Worlds are all registered trademarks of Paramount Global (previously ViacomCBS and/or Paramount Pictures and/or CBS Broadcasting, Inc.).*
 
-All images used of Star Trek characters have been screenshots, taken by myself from episodes of Star Trek: The Next Generation
+- All images used of Star Trek characters have been screenshots, taken by myself from episodes of Star Trek: The Next Generation
 
-Elements of Starfleet survey were taken from another html project of which is my own work/code. This was a project I did last year for the online course 'Responsive Web Design Certification' on the website freeCodeCamp 
+- Elements of Starfleet survey were taken from another html project of which is my own work/code. This was a project I did last year for the online course 'Responsive Web Design Certification' on the website freeCodeCamp 
  This page was not uploaded onto github, it doesn't exist as a publicly accessible web page, however I wanted to note the fact that I took elements from it here. The original has been changed, added to and greatly expanded upon for this project. 
 ![Image](assets/documents/readme-screens/original-survey.JPG)
 
-Background image of space / nebula, taken from reddit. Uploaded by u/amodep1 to r/ultrahdwallpapers
+- Background image of space / nebula, taken from reddit. Uploaded by u/amodep1 to r/ultrahdwallpapers
 [r/ultrahdwallpapers](https://www.reddit.com/r/ultrahdwallpapers/comments/86hp1i/galaxy_nebula_blurring_stars_3840x2160/ ) 
 (https://www.reddit.com/r/ultrahdwallpapers/comments/86hp1i/galaxy_nebula_blurring_stars_3840x2160/ )
 
-Google Fonts was used to import fonts 'Orbitron', 'Exo2', 
+- Google Fonts was used to import fonts 'Orbitron', 'Exo2', 
 
-Font Awesome was used to import icons
+- Font Awesome was used to import icons
 
-I used chrome dev tools to check css issues and responsiveness / media queries
+- I used chrome dev tools to check css issues and responsiveness / media queries
 
-I used a pixel image checker to compare colors from an image from the television show.
+- I used a pixel image checker to compare colors from an image from the television show.
 
-I used W3schools to check the syntax of many different types of code, throughout the process.
+- I used W3schools to check the syntax of many different types of code, throughout the process.
 
-I would like to thank my mentor Brian Macharia for his feedback and tips for this project
+- I would like to thank my mentor Brian Macharia for his feedback and tips for this project
 
